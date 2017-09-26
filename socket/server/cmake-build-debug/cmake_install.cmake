@@ -1,4 +1,4 @@
-# Install script for directory: /home/ben/CLionProjects/socket/server
+# Install script for directory: /home/ben/app/tests-for-c/socket/server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ben/CLionProjects/socket/server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ben/app/tests-for-c/socket/server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

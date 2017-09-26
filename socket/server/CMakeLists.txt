@@ -4,7 +4,6 @@ project(server)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        main.c
-        )
+        main.c)
 
 add_executable(server ${SOURCE_FILES})

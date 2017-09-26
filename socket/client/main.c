@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
     }
 
     printf("connected to server\n");
+    recv(client_sock_fd, buf,BUFSIZ,0);
     printf("%s", buf);
 
     // send and receive message

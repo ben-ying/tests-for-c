@@ -6,10 +6,8 @@
 
 #IncludeRegexTransform: 
 
-/home/ben/CLionProjects/socket/client/main.c
+/home/ben/app/tests-for-c/socket/client/main.c
 stdio.h
--
-sys/types.h
 -
 sys/socket.h
 -
