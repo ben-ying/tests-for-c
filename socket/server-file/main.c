@@ -10,7 +10,7 @@
 #include <sys/stat.h>
 #include <sys/sendfile.h>
 
-void send_file(int *client_socket, int *server_socket) {
+void send_file(int *client_socket, const int *server_socket) {
     struct sockaddr_in client_address;
     ssize_t len;
     char buffer[BUFSIZ];
@@ -72,9 +72,6 @@ void send_file(int *client_socket, int *server_socket) {
     while ((sent_bytes = sendfile(*client_socket, fd, &offset, BUFSIZ)) > 0 && (remain_data > 0)) {
         remain_data -= sent_bytes;
     }
-
-    *server_socket = 0;
-    *client_socket = 0;
 }
 
 int main(int argc, char *argv[]) {

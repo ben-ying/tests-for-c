@@ -6,7 +6,7 @@
 #include <zconf.h>
 
 int main(int argc, char *argv[]) {
-    int client_sock_fd;
+    int client_socket;
     struct sockaddr_in client_address;
     char buf[BUFSIZ];
     memset(&client_address, 0, sizeof(client_address));
@@ -15,19 +15,19 @@ int main(int argc, char *argv[]) {
     client_address.sin_port = htons(8080);
 
     // create client socket
-    if ((client_sock_fd = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
+    if ((client_socket = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
         perror("socket");
         return 1;
     }
 
     // connect to server
-    if (connect(client_sock_fd, (struct sockaddr *) &client_address, sizeof(struct sockaddr)) < 0) {
+    if (connect(client_socket, (struct sockaddr *) &client_address, sizeof(struct sockaddr)) < 0) {
         perror("connect");
         return 1;
     }
 
     printf("connected to server\n");
-    recv(client_sock_fd, buf,BUFSIZ,0);
+    recv(client_socket, buf,BUFSIZ,0);
     printf("%s", buf);
 
     // send and receive message
@@ -36,12 +36,12 @@ int main(int argc, char *argv[]) {
         scanf("%s", buf);
         if (!strcmp(buf, "quit"))
             break;
-        send(client_sock_fd, buf, strlen(buf), 0);
-        recv(client_sock_fd, buf, BUFSIZ, 0);
+        send(client_socket, buf, strlen(buf), 0);
+        recv(client_socket, buf, BUFSIZ, 0);
 
         printf("received: %s\n", buf);
     }
-    close(client_sock_fd);
+    close(client_socket);
 
     return 0;
 }
