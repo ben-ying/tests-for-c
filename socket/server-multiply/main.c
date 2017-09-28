@@ -177,7 +177,7 @@ int main(int argc, char *argv[]) {
 
     // receive and send message back to client
     int remain_data = 0;
-    char buffer[BUFSIZ];
+    FILE *received_file = NULL;
     while (memset(buf, 0, BUFSIZ), (len = recv(client_socket, buf, BUFSIZ, 0)) > 0) {
         if (buf[0] == '{' && buf[len - 1] == '}' || buf[0] == '[' && buf[len - 1] == ']') {
             printf("json str");
@@ -199,16 +199,18 @@ int main(int argc, char *argv[]) {
             }
         } else if (remain_data > 0) {
             printf("file str");
-            FILE *received_file;
-            received_file = fopen(socket_json.name, "w");
             if (received_file == NULL) {
-                fprintf(stderr, "Failed to open file foo --> %s\n", strerror(errno));
-                return -1;
+                received_file = fopen(socket_json.name, "w");
+                if (received_file == NULL) {
+                    fprintf(stderr, "Failed to open file foo --> %s\n", strerror(errno));
+                    return -1;
+                }
             }
-            fwrite(buffer, sizeof(char), len, received_file);
+            fwrite(buf, sizeof(char), len, received_file);
             remain_data -= len;
             if (remain_data <= 0) {
                 fclose(received_file);
+                received_file = NULL;
             }
         }
 //        fwrite(buffer, sizeof(char), len, received_file);

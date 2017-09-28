@@ -187,7 +187,6 @@ int main(int argc, char *argv[]) {
             printf("received file");
         } else {
             // send message and receive message
-            memset(buf, 0, BUFSIZ);
             if (send(client_socket, "{}", strlen("{}"), 0) < 0) {
                 perror("send message failed");
                 return 1;
