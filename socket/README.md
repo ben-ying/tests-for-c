@@ -25,6 +25,6 @@
 [1]: http://blog.csdn.net/ccit0519/article/details/24790971
 [2]: http://blog.csdn.net/lovekun1989/article/details/41042273
 [3]: http://blog.csdn.net/junecau/article/details/6889324
-[4]: http://lib.csdn.net/article/computernetworks/19124
+[4]: http://www.cnblogs.com/QG-whz/p/5537447.html
 [5]: http://www.cnblogs.com/Jessy/p/3536163.html
 [6]: http://www.cnblogs.com/visily/archive/2013/03/15/2961190.html
