@@ -3,14 +3,17 @@
 
 [C Socket][2]
 
+[粘包原理][3]
+
+[分包和拆包][4]
 ## TCP vs UDP
 #### TCP：
-1. [基于面向连接的协议。][3]
+1. [基于面向连接的协议。][5]
 2. 可靠性和数据包的序列性是有保证的。
 3. 自动为你的数据封包。
 4. 确保包的流量不会超出你的网络链接的负载上限。
 5. 简单易用，就像操作文件一样。
-6. [会发生粘包][4]。
+6. [会发生粘包][6]。
  
 #### UDP：
 1. 没有连接的概念，如果你想要，自己去实现去。
@@ -21,5 +24,7 @@
 
 [1]: http://blog.csdn.net/ccit0519/article/details/24790971
 [2]: http://blog.csdn.net/lovekun1989/article/details/41042273
-[3]: http://www.cnblogs.com/Jessy/p/3536163.html
-[4]: http://www.cnblogs.com/visily/archive/2013/03/15/2961190.html
+[3]: http://blog.csdn.net/junecau/article/details/6889324
+[4]: http://lib.csdn.net/article/computernetworks/19124
+[5]: http://www.cnblogs.com/Jessy/p/3536163.html
+[6]: http://www.cnblogs.com/visily/archive/2013/03/15/2961190.html
