@@ -31,7 +31,7 @@ void receive_file(const int* client_socket) {
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    while (((len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0) && (remain_data > 0)) {
+    while ((remain_data > 0) && ((len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0)) {
         fwrite(buffer, sizeof(char), len, received_file);
         remain_data -= len;
     }

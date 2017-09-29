@@ -86,13 +86,7 @@ int send_file(const int *client_socket) {
     }
 
     usleep(100);
-//    char buffer[BUFSIZ];
-//    if (recv(*client_socket, buffer, BUFSIZ, 0) < 0) {
-//        return -1;
-//    }
-//    if (strcmp(buffer, SUCCESS) < 0) {
-//        return -1;
-//    }
+
     // Sending file data
     while ((sent_bytes = sendfile(*client_socket, fd, &offset, BUFSIZ)) > 0 && (remain_data > 0)) {
         remain_data -= sent_bytes;
@@ -101,12 +95,12 @@ int send_file(const int *client_socket) {
     return 0;
 }
 
-int receive_file(const int *client_socket) {
+int receive_file(const int* client_socket, const struct SocketJson* socket_json) {
     FILE *received_file;
     ssize_t len;
     char buffer[BUFSIZ];
 
-    received_file = fopen("../client.apk", "w");
+    received_file = fopen(socket_json->name, "w");
     if (received_file == NULL) {
         fprintf(stderr, "Failed to open file foo --> %s\n", strerror(errno));
         return -1;
@@ -115,8 +109,15 @@ int receive_file(const int *client_socket) {
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    while ((len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0) {
-        fwrite(buffer, sizeof(char), len, received_file);
+    int remain_data = socket_json->size;
+    while ((remain_data > 0) && (len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0) {
+        int i = fwrite(buffer, sizeof(char), len, received_file);
+        printf("write: %d, %d\n", i, len);
+        remain_data -= len;
+        printf("remain_data: %d\n", remain_data);
+//        if (i < BUFSIZ) {
+//            break;
+//        }
     }
 
     gettimeofday(&stop, NULL);
@@ -180,7 +181,19 @@ int main(int argc, char *argv[]) {
                 perror("request file failed");
                 return 1;
             }
-            if (receive_file(&client_socket) < 0) {
+
+            recv(client_socket, buf, BUFSIZ, 0);
+
+            JSON_Value *root_value = json_parse_string(buf);
+            JSON_Object *root_object = json_value_get_object(root_value);
+
+            socket_json.type = json_object_get_number(root_object, "type");
+            socket_json.size = json_object_get_number(root_object, "size");
+            socket_json.name = json_object_get_string(root_object, "name");
+            socket_json.data = json_object_get_string(root_object, "data");
+            socket_json.message = json_object_get_string(root_object, "message");
+
+            if (receive_file(&client_socket, &socket_json) < 0) {
                 perror("receive file failed");
                 return 1;
             }

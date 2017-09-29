@@ -27,11 +27,24 @@ struct SocketJson {
     char *message;
 };
 
-int send_file(int *client_socket, const int *server_socket, const struct SocketJson *socket_json) {
-    struct sockaddr_in client_address;
+char* serialization_socket_json(const struct SocketJson *socket_json) {
+    JSON_Value *root_value = json_parse_file("../socket.json");
+    JSON_Object *root_object = json_value_get_object(root_value);
+    char *serialized_string = NULL;
+    json_object_set_number(root_object, "type", socket_json->type);
+    json_object_set_number(root_object, "size", socket_json->size);
+    json_object_dotset_string(root_object, "name", socket_json->name);
+    json_object_dotset_string(root_object, "data", socket_json->data);
+    serialized_string = json_serialize_to_string_pretty(root_value);
+    puts(serialized_string);
+//    json_free_serialized_string(serialized_string);
+    json_value_free(root_value);
+
+    return serialized_string;
+}
+
+int send_file(const int *client_socket, struct SocketJson *socket_json) {
     ssize_t len;
-    char buffer[BUFSIZ];
-    socklen_t sin_size;
     int fd;
     off_t offset;
     off_t remain_data;
@@ -58,50 +71,28 @@ int send_file(int *client_socket, const int *server_socket, const struct SocketJ
     }
 
     fprintf(stdout, "Server sent %ld bytes for the size\n", len);
+    remain_data = file_stat.st_size;
+
+    // send file message
+    socket_json->type = TYPE_FILE;
+    socket_json->size= remain_data;
+    socket_json->data = "";
+    socket_json->message = "receive file from server";
+    char* json_str = serialization_socket_json(socket_json);
+
+    if (send(*client_socket, json_str, strlen(json_str), 0) < 0) {
+        perror("send file failed");
+        return -1;
+    }
+
+    usleep(100);
 
     offset = 0;
-    remain_data = file_stat.st_size;
     // Sending file data
     while ((sent_bytes = sendfile(*client_socket, fd, &offset, BUFSIZ)) > 0 && (remain_data > 0)) {
         remain_data -= sent_bytes;
     }
 }
-
-int receive_file(const int *client_socket, const struct SocketJson *socket_json) {
-    int file_size;
-    FILE *received_file;
-    int remain_data = 0;
-    ssize_t len;
-    char buffer[BUFSIZ];
-
-    printf("connected to server\n");
-
-    file_size = socket_json->size;
-    fprintf(stdout, "\nFile size : %d\n", file_size);
-    received_file = fopen(socket_json->name, "w");
-    if (received_file == NULL) {
-        fprintf(stderr, "Failed to open file foo --> %s\n", strerror(errno));
-        return -1;
-    }
-    remain_data = file_size;
-
-    struct timeval stop, start;
-    gettimeofday(&start, NULL);
-
-    while (((len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0) && (remain_data > 0)) {
-        printf("buffer: %s", buffer);
-        fwrite(buffer, sizeof(char), len, received_file);
-        remain_data -= len;
-    }
-
-    gettimeofday(&stop, NULL);
-    printf("took %lu\n", (stop.tv_usec - start.tv_usec) / 1000); // 1-7 milliseconds for 3.4M
-
-    fclose(received_file);
-
-    return 0;
-}
-
 
 int main(int argc, char *argv[]) {
     int server_socket;
@@ -157,24 +148,6 @@ int main(int argc, char *argv[]) {
     char *welcome = "Welcome to my server\n";
     send(client_socket, welcome, strlen(welcome), 0);
 
-    // file
-//    int file_size;
-//    FILE *received_file;
-//    int remain_data = 0;
-//    ssize_t len;
-//    char buffer[BUFSIZ];
-//
-//    printf("connected to server\n");
-//
-//    file_size = socket_json->size;
-//    fprintf(stdout, "\nFile size : %d\n", file_size);
-//    received_file = fopen(socket_json->name, "w");
-//    if (received_file == NULL) {
-//        fprintf(stderr, "Failed to open file foo --> %s\n", strerror(errno));
-//        return -1;
-//    }
-//    remain_data = file_size;
-
     // receive and send message back to client
     int remain_data = 0;
     FILE *received_file = NULL;
@@ -196,6 +169,8 @@ int main(int argc, char *argv[]) {
                     perror("send message failed");
                     return 1;
                 }
+            } else if (socket_json.type == TYPE_REQUEST_FILE) {
+                send_file(&client_socket, &socket_json);
             }
         } else if (remain_data > 0) {
             printf("file str");
@@ -213,31 +188,6 @@ int main(int argc, char *argv[]) {
                 received_file = NULL;
             }
         }
-//        fwrite(buffer, sizeof(char), len, received_file);
-//        printf("received: %s\n", buf);
-//        printf("length: %d\n", strlen(buf));
-//        JSON_Value *root_value = json_parse_string(buf);
-//        JSON_Object *root_object = json_value_get_object(root_value);
-//
-//        socket_json.type = json_object_get_number(root_object, "type");
-//        socket_json.size = json_object_get_number(root_object, "size");
-//        socket_json.name = json_object_get_string(root_object, "name");
-//        socket_json.data = json_object_get_string(root_object, "data");
-//        socket_json.message = json_object_get_string(root_object, "message");
-//
-//        if (socket_json.type == TYPE_FILE) {
-////             start receive file
-//            receive_file(&client_socket, &socket_json);
-//        } else if (socket_json.type == TYPE_REQUEST_FILE) {
-//            // send file
-//            send_file(&client_socket, &server_socket, &socket_json);
-//        } else {
-//            // send back message
-//            if (send(client_socket, buf, len, 0) < 0) {
-//                perror("send message failed");
-//                return 1;
-//            }
-//        }
     }
 
 
