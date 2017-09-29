@@ -150,6 +150,8 @@ int main(int argc, char *argv[]) {
     FILE *received_file = NULL;
     while (memset(buf, 0, BUFSIZ), (len = recv(client_socket, buf, BUFSIZ, 0)) > 0) {
         if (buf[0] == '{' && buf[len - 1] == '}' || buf[0] == '[' && buf[len - 1] == ']') {
+            // １：strlen(buf) maybe > BUFSIZ
+            // ２：file contents maybe a json file
             printf("json str: %s\n", buf);
             JSON_Value *root_value = json_parse_string(buf);
             JSON_Object *root_object = json_value_get_object(root_value);
