@@ -96,7 +96,7 @@ int send_file(const int *client_socket) {
         return -1;
     }
 
-//    usleep(100);
+    usleep(100);
 
     // Sending file data
     while ((sent_bytes = sendfile(*client_socket, fd, &offset, BUFSIZ)) > 0 && (remain_data > 0)) {

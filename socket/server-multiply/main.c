@@ -82,7 +82,7 @@ int send_file(const int *client_socket, SocketJson *socket_json) {
         return -1;
     }
 
-//    usleep(100);
+    usleep(100);
 
     offset = 0;
     // Sending file data
