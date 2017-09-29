@@ -40,7 +40,7 @@ void send_file(int *client_socket, const int *server_socket) {
         exit(EXIT_FAILURE);
     }
 
-    fprintf(stdout, "File Size: \n%ld bytes\n", file_stat.st_size);
+    fprintf(stdout, "File Size: %ld bytes\n", file_stat.st_size);
 
     sin_size = sizeof(struct sockaddr_in);
 
@@ -88,11 +88,11 @@ int main(int argc, char *argv[]) {
     // IP address
     server_address.sin_addr.s_addr = inet_addr("127.0.0.1");
     // Port
-    server_address.sin_port = htons(8080);
+    server_address.sin_port = htons(6666);
 
     // create server socket
     if ((server_socket = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
-        perror("socket failed");
+        perror("create socket failed");
         exit(EXIT_FAILURE);
     }
 

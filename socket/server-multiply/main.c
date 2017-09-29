@@ -9,25 +9,22 @@
 #include <errno.h>
 #include <sys/stat.h>
 #include <sys/sendfile.h>
-#include <sys/time.h>
-#include <stdbool.h>
 #include "parson.h"
 
-#define SUCCESS "success"
 
 enum Type {
     TYPE_DATA, TYPE_FILE, TYPE_REQUEST_FILE
 };
 
-struct SocketJson {
+typedef struct SocketJson {
     int type;
     long size;
     char *name;
     char *data;
     char *message;
-};
+} SocketJson;
 
-char* serialization_socket_json(const struct SocketJson *socket_json) {
+char *object_to_json(const SocketJson *socket_json) {
     JSON_Value *root_value = json_parse_file("../socket.json");
     JSON_Object *root_object = json_value_get_object(root_value);
     char *serialized_string = NULL;
@@ -43,7 +40,7 @@ char* serialization_socket_json(const struct SocketJson *socket_json) {
     return serialized_string;
 }
 
-int send_file(const int *client_socket, struct SocketJson *socket_json) {
+int send_file(const int *client_socket, SocketJson *socket_json) {
     ssize_t len;
     int fd;
     off_t offset;
@@ -75,10 +72,10 @@ int send_file(const int *client_socket, struct SocketJson *socket_json) {
 
     // send file message
     socket_json->type = TYPE_FILE;
-    socket_json->size= remain_data;
+    socket_json->size = remain_data;
     socket_json->data = "";
     socket_json->message = "receive file from server";
-    char* json_str = serialization_socket_json(socket_json);
+    char *json_str = object_to_json(socket_json);
 
     if (send(*client_socket, json_str, strlen(json_str), 0) < 0) {
         perror("send file failed");
@@ -102,7 +99,7 @@ int main(int argc, char *argv[]) {
     struct sockaddr_in client_address;
     socklen_t sin_size;
     char buf[BUFSIZ];
-    struct SocketJson socket_json;
+    SocketJson socket_json;
     // init
     memset(&server_address, 0, sizeof(server_address));
     // IPv4
@@ -112,7 +109,7 @@ int main(int argc, char *argv[]) {
     // IP address
     server_address.sin_addr.s_addr = inet_addr("127.0.0.1");
     // Port
-    server_address.sin_port = htons(8080);
+    server_address.sin_port = htons(6666);
 
     // create server socket
     if ((server_socket = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
@@ -153,7 +150,7 @@ int main(int argc, char *argv[]) {
     FILE *received_file = NULL;
     while (memset(buf, 0, BUFSIZ), (len = recv(client_socket, buf, BUFSIZ, 0)) > 0) {
         if (buf[0] == '{' && buf[len - 1] == '}' || buf[0] == '[' && buf[len - 1] == ']') {
-            printf("json str");
+            printf("json str: %s\n", buf);
             JSON_Value *root_value = json_parse_string(buf);
             JSON_Object *root_object = json_value_get_object(root_value);
 
@@ -173,7 +170,6 @@ int main(int argc, char *argv[]) {
                 send_file(&client_socket, &socket_json);
             }
         } else if (remain_data > 0) {
-            printf("file str");
             if (received_file == NULL) {
                 received_file = fopen(socket_json.name, "w");
                 if (received_file == NULL) {
@@ -186,10 +182,10 @@ int main(int argc, char *argv[]) {
             if (remain_data <= 0) {
                 fclose(received_file);
                 received_file = NULL;
+                printf("received file: %s\n", socket_json.name);
             }
         }
     }
-
 
     close(client_socket);
     close(server_socket);

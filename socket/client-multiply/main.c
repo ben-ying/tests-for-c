@@ -18,15 +18,15 @@ enum Type {
     TYPE_DATA, TYPE_FILE, TYPE_REQUEST_FILE
 };
 
-struct SocketJson {
+typedef struct SocketJson {
     int type;
     long size;
     char *name;
     char *data;
     char *message;
-};
+} SocketJson;
 
-char* serialization_socket_json(const struct SocketJson *socket_json) {
+char *object_to_json(const SocketJson *socket_json) {
     JSON_Value *root_value = json_parse_file("../socket.json");
     JSON_Object *root_object = json_value_get_object(root_value);
     char *serialized_string = NULL;
@@ -42,6 +42,17 @@ char* serialization_socket_json(const struct SocketJson *socket_json) {
     return serialized_string;
 }
 
+void json_to_object(char *buf, SocketJson *socket_json) {
+    JSON_Value *root_value = json_parse_string(buf);
+    JSON_Object *root_object = json_value_get_object(root_value);
+
+    socket_json->type = json_object_get_number(root_object, "type");
+    socket_json->size = json_object_get_number(root_object, "size");
+    socket_json->name = json_object_get_string(root_object, "name");
+    socket_json->data = json_object_get_string(root_object, "data");
+    socket_json->message = json_object_get_string(root_object, "message");
+}
+
 int send_file(const int *client_socket) {
     int fd;
     off_t offset;
@@ -49,7 +60,7 @@ int send_file(const int *client_socket) {
     struct stat file_stat;
     ssize_t sent_bytes = 0;
     char cwd[1024];
-    char* file_name = "../client_file";
+    char *file_name = "../client_file";
 
     // Open file
     fd = open(file_name, O_RDONLY);
@@ -72,13 +83,13 @@ int send_file(const int *client_socket) {
     offset = 0;
     remain_data = file_stat.st_size;
     // send file message
-    struct SocketJson socket_json;
+    SocketJson socket_json;
     socket_json.type = TYPE_FILE;
     socket_json.size = remain_data;
     socket_json.name = file_name;
     socket_json.data = "";
     socket_json.message = "receive file from client";
-    char* json_str = serialization_socket_json(&socket_json);
+    char *json_str = object_to_json(&socket_json);
 
     if (send(*client_socket, json_str, strlen(json_str), 0) < 0) {
         perror("send file failed");
@@ -95,7 +106,7 @@ int send_file(const int *client_socket) {
     return 0;
 }
 
-int receive_file(const int* client_socket, const struct SocketJson* socket_json) {
+int receive_file(const int *client_socket, const SocketJson *socket_json) {
     FILE *received_file;
     ssize_t len;
     char buffer[BUFSIZ];
@@ -109,15 +120,10 @@ int receive_file(const int* client_socket, const struct SocketJson* socket_json)
     struct timeval stop, start;
     gettimeofday(&start, NULL);
 
-    int remain_data = socket_json->size;
+    long remain_data = socket_json->size;
     while ((remain_data > 0) && (len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0) {
-        int i = fwrite(buffer, sizeof(char), len, received_file);
-        printf("write: %d, %d\n", i, len);
+        fwrite(buffer, sizeof(char), (size_t) len, received_file);
         remain_data -= len;
-        printf("remain_data: %d\n", remain_data);
-//        if (i < BUFSIZ) {
-//            break;
-//        }
     }
 
     gettimeofday(&stop, NULL);
@@ -128,47 +134,46 @@ int receive_file(const int* client_socket, const struct SocketJson* socket_json)
     return 0;
 }
 
-
 int main(int argc, char *argv[]) {
     int client_socket;
     struct sockaddr_in client_address;
-    char buf[BUFSIZ];
+    char buffer[BUFSIZ];
     memset(&client_address, 0, sizeof(client_address));
     client_address.sin_family = AF_INET;
     client_address.sin_addr.s_addr = inet_addr("127.0.0.1");
-    client_address.sin_port = htons(8080);
+    client_address.sin_port = htons(6666);
 
     // create client socket
     if ((client_socket = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
-        perror("socket");
+        perror("create socket failed");
         return 1;
     }
 
     // connect to server
     if (connect(client_socket, (struct sockaddr *) &client_address, sizeof(struct sockaddr)) < 0) {
-        perror("connect");
+        perror("connect failed");
         return 1;
     }
 
     printf("connected to server\n");
-    recv(client_socket, buf, BUFSIZ, 0);
-    printf("%s", buf);
+    recv(client_socket, buffer, BUFSIZ, 0);
+    printf("%s", buffer);
 
     // send and receive message
     while (1) {
-        memset(buf, 0, BUFSIZ);
-        printf("1 for send file\n2 for request file\nOthers for send message\nEnter string to send:\n");
-        scanf("%s", buf);
-        if (!strcmp(buf, "quit"))
+        memset(buffer, 0, BUFSIZ);
+        printf("1 for send file\n2 for request file\nOthers for send message\nEnter string to send: ");
+        scanf("%s", buffer);
+        if (!strcmp(buffer, "quit"))
             break;
 
-        if (strcmp(buf, "1") == 0) {
+        if (strcmp(buffer, "1") == 0) {
             // send file
             if (send_file(&client_socket) < 0) {
                 perror("send file failed");
                 return 1;
             }
-        } else if (strcmp(buf, "2") == 0) {
+        } else if (strcmp(buffer, "2") == 0) {
             // request file
             struct SocketJson socket_json;
             socket_json.type = TYPE_REQUEST_FILE;
@@ -176,38 +181,33 @@ int main(int argc, char *argv[]) {
             socket_json.name = "../client.apk";
             socket_json.data = "";
             socket_json.message = "request file";
-            char* json_str = serialization_socket_json(&socket_json);
+            char *json_str = object_to_json(&socket_json);
+
             if (send(client_socket, json_str, strlen(json_str), 0) < 0) {
                 perror("request file failed");
                 return 1;
             }
 
-            recv(client_socket, buf, BUFSIZ, 0);
+            recv(client_socket, buffer, BUFSIZ, 0);
 
-            JSON_Value *root_value = json_parse_string(buf);
-            JSON_Object *root_object = json_value_get_object(root_value);
-
-            socket_json.type = json_object_get_number(root_object, "type");
-            socket_json.size = json_object_get_number(root_object, "size");
-            socket_json.name = json_object_get_string(root_object, "name");
-            socket_json.data = json_object_get_string(root_object, "data");
-            socket_json.message = json_object_get_string(root_object, "message");
+            json_to_object(buffer, &socket_json);
 
             if (receive_file(&client_socket, &socket_json) < 0) {
                 perror("receive file failed");
                 return 1;
             }
-            printf("received file");
+            printf(socket_json.message);
         } else {
             // send message and receive message
             if (send(client_socket, "{}", strlen("{}"), 0) < 0) {
                 perror("send message failed");
                 return 1;
             }
-            recv(client_socket, buf, BUFSIZ, 0);
-            printf("received: %s\n", buf);
+            recv(client_socket, buffer, BUFSIZ, 0);
+            printf("received: %s\n", buffer);
         }
     }
+
     close(client_socket);
 
     return 0;

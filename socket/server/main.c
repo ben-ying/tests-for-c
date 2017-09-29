@@ -23,12 +23,12 @@ int main(int argc, char *argv[]) {
     // IP address
     server_address.sin_addr.s_addr = inet_addr("127.0.0.1");
     // Port
-    server_address.sin_port = htons(8080);
+    server_address.sin_port = htons(6666);
 
     // create server socket
     if ((server_socket = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
-        perror("socket");
-        return 1;
+        perror("create socket failed");
+        exit(EXIT_FAILURE);
     }
 
     // reuse port
@@ -45,14 +45,17 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    listen(server_socket, 5);
+    if (listen(server_socket, 5) < 0) {
+        perror("listen failed");
+        exit(EXIT_FAILURE);
+    }
 
     sin_size = sizeof(struct sockaddr_in);
 
     if ((client_socket = accept(server_socket,
-                                 (struct sockaddr *) &client_address, &sin_size)) < 0) {
-        perror("accept");
-        return 1;
+                                (struct sockaddr *) &client_address, &sin_size)) < 0) {
+        perror("accept failed");
+        exit(EXIT_FAILURE);
     }
 
     printf("accept client %s\n", inet_ntoa(client_address.sin_addr));
@@ -61,10 +64,10 @@ int main(int argc, char *argv[]) {
 
     // receive and send message back to client
     while ((len = recv(client_socket, buf, BUFSIZ, 0)) > 0) {
-        printf("received: %s\n", buf);
-        if (send(client_socket, buf, len, 0) < 0) {
-            perror("write");
-            return 1;
+        printf("received %s from client\n", buf);
+        if (send(client_socket, buf, (size_t) len, 0) < 0) {
+            perror("send failed");
+            exit(EXIT_FAILURE);
         }
     }
     close(client_socket);

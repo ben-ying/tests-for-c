@@ -17,7 +17,6 @@ void receive_file(const int* client_socket) {
 
     printf("connected to server\n");
     recv(*client_socket, buffer, BUFSIZ, 0);
-    printf("%s", buffer);
 
     file_size = atoi(buffer);
     fprintf(stdout, "\nFile size : %d\n", file_size);
@@ -32,7 +31,7 @@ void receive_file(const int* client_socket) {
     gettimeofday(&start, NULL);
 
     while ((remain_data > 0) && ((len = recv(*client_socket, buffer, BUFSIZ, 0)) > 0)) {
-        fwrite(buffer, sizeof(char), len, received_file);
+        fwrite(buffer, sizeof(char), (size_t) len, received_file);
         remain_data -= len;
     }
 
@@ -53,7 +52,7 @@ int main(int argc, char *argv[]) {
     // IP address
     client_address.sin_addr.s_addr = inet_addr("127.0.0.1");
     // port
-    client_address.sin_port = htons(8080);
+    client_address.sin_port = htons(6666);
 
     // create client socket
     if ((client_socket = socket(PF_INET, SOCK_STREAM, 0)) < 0) {
