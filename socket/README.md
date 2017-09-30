@@ -25,6 +25,14 @@
 5. 你必须自己处理包的丢失，重复，乱序的情况，如果你不想他们对你的程序造成麻烦，必须要自己实现代码来做出应对。
 
 ## [JSON][8]
+```
+{"key": "value"}
+{"key": 1}
+{"key": [1, 2, 3]}
+{"key": {"key1": "value1"}}
+[{"key1": "value1"}, {"key2": "value2"}, {"key3": "value3"}]
+```
+key必须是字符串，value可以是任意类型(int, String, Array...)或者Json格式
 
 [1]: http://www.cnblogs.com/meier1205/p/5971313.html
 [2]: http://blog.csdn.net/ccit0519/article/details/24790971
