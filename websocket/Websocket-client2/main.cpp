@@ -10,17 +10,17 @@ int main() {
 
     h.onConnection([&client, &m](uWS::WebSocket<uWS::CLIENT> *ws, uWS::HttpRequest req) {
         client = ws;
-        std::cout << "Client Connected" << std::endl;
-        client->send("1111");
+        std::cout << "Client2 Connected" << std::endl;
+        client->send("22");
     });
 
     h.onMessage([](uWS::WebSocket<uWS::CLIENT> *ws, char *message, size_t length, uWS::OpCode opCode) {
-        std::cout << "Client onMessage: "
+        std::cout << "Client2 onMessage: "
                   << *message << ", length: " << length << ", code: " << opCode << std::endl;
     });
 
     h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
-        res->end("test", 1);
+        res->end("test2", 1);
     });
 
     h.listen(3000);

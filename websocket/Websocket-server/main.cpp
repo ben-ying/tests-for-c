@@ -1195,10 +1195,9 @@ int main(int argc, char *argv[]) {
         res->end();
     });
 
-    if (h.listen(3000)) {
-        h.connect("ws://localhost:3000", nullptr);
-        h.run();
-    }
+    h.listen(3000);
+    h.connect("ws://localhost:3000", nullptr);
+    h.run();
 
 
     //serveEventSource();
