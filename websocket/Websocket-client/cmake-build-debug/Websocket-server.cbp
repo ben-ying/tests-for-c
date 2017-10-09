@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Websocket-server"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ben/CLionProjects/Websocket-server/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ben/CLionProjects/Websocket-server/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ben/CLionProjects/Websocket-server/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Websocket_server">
+				<Option output="/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Websocket_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ben/CLionProjects/Websocket-server/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 Websocket_server"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Websocket_server/fast">
+				<Option output="/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Websocket_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ben/CLionProjects/Websocket-server/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 Websocket_server/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/CLionProjects/Websocket-server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/main.cpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/base64/base64.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/client.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/close.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/asio.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/asio_ssl.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/chrono.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/connection_hdl.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/cpp11.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/functional.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/md5.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/memory.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/network.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/platforms.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/random.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/regex.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/stdint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/system_error.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/thread.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/time.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/common/type_traits.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/concurrency/basic.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/concurrency/none.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/asio.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/asio_client.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/asio_no_tls.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/asio_no_tls_client.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/boost_config.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/core.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/core_client.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/debug.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/debug_asio.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/debug_asio_no_tls.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/minimal_client.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/config/minimal_server.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/connection.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/connection_base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/endpoint_base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/error.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/extensions/extension.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/extensions/permessage_deflate/disabled.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/extensions/permessage_deflate/enabled.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/frame.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/constants.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/impl/parser.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/impl/request.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/impl/response.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/parser.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/request.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/http/response.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/impl/connection_impl.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/impl/endpoint_impl.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/impl/utilities_impl.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/logger/basic.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/logger/levels.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/logger/stub.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/logger/syslog.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/message_buffer/alloc.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/message_buffer/message.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/message_buffer/pool.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/processors/base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/processors/hybi00.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/processors/hybi07.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/processors/hybi08.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/processors/hybi13.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/processors/processor.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/random/none.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/random/random_device.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/roles/client_endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/roles/server_endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/server.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/sha1/sha1.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/asio/base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/asio/connection.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/asio/endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/asio/security/base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/asio/security/none.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/asio/security/tls.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/base/connection.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/base/endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/debug/base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/debug/connection.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/debug/endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/iostream/base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/iostream/connection.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/iostream/endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/stub/base.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/stub/connection.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/transport/stub/endpoint.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/uri.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/utf8_validator.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/utilities.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/websocketpp/version.hpp">
+			<Option target="Websocket_server"/>
+		</Unit>
+		<Unit filename="/home/ben/CLionProjects/Websocket-server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -148,6 +148,7 @@ int main(int argc, char *argv[]) {
     // receive and send message back to client
     int remain_data = 0;
     FILE *received_file = NULL;
+
     while (memset(buf, 0, BUFSIZ), (len = recv(client_socket, buf, BUFSIZ, 0)) > 0) {
         if (buf[0] == '{' && buf[len - 1] == '}' || buf[0] == '[' && buf[len - 1] == ']') {
             // １：strlen(buf) maybe > BUFSIZ

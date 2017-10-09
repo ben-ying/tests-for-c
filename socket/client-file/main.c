@@ -3,10 +3,10 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <string.h>
-#include <zconf.h>
 #include <stdlib.h>
 #include <errno.h>
 #include <sys/time.h>
+#include <zconf.h>
 
 void receive_file(const int* client_socket) {
     int file_size;

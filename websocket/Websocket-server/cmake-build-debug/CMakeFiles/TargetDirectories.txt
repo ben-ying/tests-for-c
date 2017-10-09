@@ -1,0 +1,3 @@
+/home/ben/CLionProjects/Websocket-server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ben/CLionProjects/Websocket-server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ben/CLionProjects/Websocket-server/cmake-build-debug/CMakeFiles/Websocket_server.dir
