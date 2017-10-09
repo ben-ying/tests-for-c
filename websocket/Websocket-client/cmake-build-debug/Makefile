@@ -48,10 +48,10 @@ RM = /home/ben/Downloads/clion-2017.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/CLionProjects/Websocket-server
+CMAKE_SOURCE_DIR = /home/ben/app/tests-for-c/websocket/Websocket-client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/CLionProjects/Websocket-server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ben/app/tests-for-c/websocket/Websocket-client/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/CLionProjects/Websocket-server/cmake-build-debug/CMakeFiles /home/ben/CLionProjects/Websocket-server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/tests-for-c/websocket/Websocket-client/cmake-build-debug/CMakeFiles /home/ben/app/tests-for-c/websocket/Websocket-client/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/CLionProjects/Websocket-server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/tests-for-c/websocket/Websocket-client/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Websocket_server
+# Target rules for targets named Websocket_client
 
 # Build rule for target.
-Websocket_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Websocket_server
-.PHONY : Websocket_server
+Websocket_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Websocket_client
+.PHONY : Websocket_client
 
 # fast build rule for target.
-Websocket_server/fast:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/build
-.PHONY : Websocket_server/fast
+Websocket_client/fast:
+	$(MAKE) -f CMakeFiles/Websocket_client.dir/build.make CMakeFiles/Websocket_client.dir/build
+.PHONY : Websocket_client/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Websocket_client.dir/build.make CMakeFiles/Websocket_client.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Websocket_client.dir/build.make CMakeFiles/Websocket_client.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Websocket_client.dir/build.make CMakeFiles/Websocket_client.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Websocket_server"
+	@echo "... Websocket_client"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

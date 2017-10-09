@@ -6,9 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/ben/CLionProjects/Websocket-server/main.cpp
-assert.h
--
+/home/ben/app/tests-for-c/websocket/Websocket-server/main.cpp
 uWS/uWS.h
+-
+iostream
+-
+chrono
+-
+cmath
+-
+thread
+-
+fstream
+-
+vector
+-
+set
+-
+unordered_set
+-
+unordered_map
+-
+map
+-
+atomic
 -
 

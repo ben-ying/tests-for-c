@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Websocket_server.dir/main.cpp.o  -o Websocket_server -luWS -lssl -lz 
+/usr/bin/c++  -g   CMakeFiles/Websocket_server.dir/main.cpp.o  -o Websocket_server -luWS -lssl -lz -lpthread 
