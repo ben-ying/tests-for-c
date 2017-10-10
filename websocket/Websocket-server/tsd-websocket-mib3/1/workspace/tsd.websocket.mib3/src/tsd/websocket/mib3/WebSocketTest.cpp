@@ -1,19 +1,19 @@
-// NOTE: This is not part of the library, this file holds examples and tests
-
+#include "WebSocketTest.hpp"
 #include <uWS/uWS.h>
-#include <iostream>
-#include <chrono>
-#include <cmath>
 #include <thread>
 #include <fstream>
-#include <vector>
 #include <set>
 #include <unordered_set>
 #include <unordered_map>
-#include <map>
 #include <atomic>
 
-int countOccurrences(std::string word, std::string &document) {
+WebSocketTest::WebSocketTest() {}
+
+WebSocketTest::~WebSocketTest() {
+
+}
+
+int WebSocketTest::countOccurrences(std::string word, std::string &document) {
     int count = 0;
     for (size_t pos = document.find(word); pos != std::string::npos; pos = document.find(word, pos + word.length())) {
         count++;
@@ -88,7 +88,7 @@ int countOccurrences(std::string word, std::string &document) {
 //    delete[] buffer;
 //}
 
-void serveBenchmark() {
+void WebSocketTest::serveBenchmark() {
     uWS::Hub h;
 
     h.onMessage([&h](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
@@ -100,7 +100,7 @@ void serveBenchmark() {
     h.run();
 }
 
-void measureInternalThroughput(unsigned int payloadLength, int echoes, bool ssl) {
+void WebSocketTest::measureInternalThroughput(unsigned int payloadLength, int echoes, bool ssl) {
     uWS::Hub h;
 
     char *payload = new char[payloadLength];
@@ -206,7 +206,7 @@ void measureInternalThroughput(unsigned int payloadLength, int echoes, bool ssl)
     delete[] payload;
 }
 
-void testStress() {
+void WebSocketTest::testStress() {
     for (int i = 0; i < 25; i++) {
         int payloadLength = std::pow(2, i);
         int echoes = 1;//std::max<int>(std::pow(2, 24 - i) / 50, 1);
@@ -219,7 +219,7 @@ void testStress() {
     }
 }
 
-void testConnections() {
+void WebSocketTest::testConnections() {
     uWS::Hub h;
 
     h.onError([](void *user) {
@@ -297,7 +297,7 @@ void testConnections() {
     std::cout << "Falling through testConnections" << std::endl;
 }
 
-void testListening() {
+void WebSocketTest::testListening() {
     uWS::Hub h;
 
     h.onError([](int port) {
@@ -324,7 +324,7 @@ void testListening() {
     std::cout << "Server falls through after group closes" << std::endl;
 }
 
-void testClosing() {
+void WebSocketTest::testClosing() {
     uWS::Hub h;
     const char *closeMessage = "Closing you down!";
 
@@ -379,7 +379,7 @@ void testClosing() {
     std::cout << "Falling through after testClosing!" << std::endl;
 }
 
-void testBroadcast() {
+void WebSocketTest::testBroadcast() {
     uWS::Hub h;
 
     const char *broadcastMessage = "This will be broadcasted!";
@@ -429,7 +429,7 @@ void testBroadcast() {
     std::cout << "Falling through now!" << std::endl;
 }
 
-void testRouting() {
+void WebSocketTest::testRouting() {
     uWS::Hub h;
 
     int correctStrings = 0;
@@ -473,7 +473,7 @@ void testRouting() {
     }
 }
 
-void testReusePort() {
+void WebSocketTest::testReusePort() {
     uWS::Hub h;
 
     uWS::Group<uWS::SERVER> *group1 = h.createGroup<uWS::SERVER>();
@@ -495,7 +495,7 @@ void testReusePort() {
     delete group2;
 }
 
-void testTransfers() {
+void WebSocketTest::testTransfers() {
     for (int ssl = 0; ssl < 2; ssl++) {
         uWS::Group<uWS::SERVER> *tServerGroup = nullptr;
         uWS::Group<uWS::CLIENT> *clientGroup = nullptr;
@@ -610,7 +610,7 @@ void testTransfers() {
     std::cout << "Falling through testMultithreading" << std::endl;
 }
 
-void testSendCallback() {
+void WebSocketTest::testSendCallback() {
     uWS::Hub h;
 
     h.onConnection([&h](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
@@ -636,7 +636,7 @@ void testSendCallback() {
     h.run();
 }
 
-void testAutoPing() {
+void WebSocketTest::testAutoPing() {
     uWS::Hub h;
 
     int pongs = 0, pings = 0;
@@ -670,7 +670,7 @@ void testAutoPing() {
     h.run();
 }
 
-void testSmallSends() {
+void WebSocketTest::testSmallSends() {
     uWS::Hub h;
 
     int length = 0;
@@ -694,7 +694,7 @@ void testSmallSends() {
 }
 
 // WIP - add excluded messages!
-void testMessageBatch() {
+void WebSocketTest::testMessageBatch() {
     uWS::Hub h;
 
     std::vector<std::string> messages = {"hello", "world"};
@@ -733,7 +733,7 @@ void testMessageBatch() {
     h.run();
 }
 
-void testHTTP() {
+void WebSocketTest::testHTTP() {
     uWS::Hub h;
     std::atomic<int> expectedRequests(0);
 
@@ -979,7 +979,7 @@ void testHTTP() {
 }
 
 // todo: move this out to examples folder, it is not a test but a stragiht up example of EventSource support
-void serveEventSource() {
+void WebSocketTest::serveEventSource() {
     uWS::Hub h;
 
     std::string document = "<script>var es = new EventSource('/eventSource'); es.onmessage = function(message) {document.write('<p><b>Server sent event:</b> ' + message.data + '</p>');};</script>";
@@ -1036,7 +1036,7 @@ void serveEventSource() {
     h.run();
 }
 
-void serveHttp() {
+void WebSocketTest::serveHttp() {
     uWS::Hub h;
 
     std::string document = "<h2>Well hello there, this is a basic test!</h2>";
@@ -1050,7 +1050,7 @@ void serveHttp() {
     h.run();
 }
 
-void testReceivePerformance() {
+void WebSocketTest::testReceivePerformance() {
     // Binary "Rock it with HTML5 WebSocket"
     unsigned char webSocketMessage[] = {0x82, 0x9c, 0x37, 0x22, 0x79, 0xa5, 0x65, 0x4d, 0x1a, 0xce, 0x17, 0x4b, 0x0d,
                                         0x85, 0x40, 0x4b, 0x0d, 0xcd, 0x17, 0x6a, 0x2d, 0xe8, 0x7b, 0x17, 0x59, 0xf2,
@@ -1105,7 +1105,7 @@ void testReceivePerformance() {
     delete[] originalBuffer;
 }
 
-void testThreadSafety() {
+void WebSocketTest::testThreadSafety() {
 
     uS::TLS::Context c = uS::TLS::createContext("misc/ssl/cert.pem",
                                                 "misc/ssl/key.pem",
@@ -1178,68 +1178,4 @@ void testThreadSafety() {
     }
 }
 
-int main(int argc, char *argv[]) {
-    uWS::Hub h;
 
-    h.onConnection([](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
-        std::cout << "Server Connected" << std::endl;
-        ws->send("112233");
-    });
-
-    h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
-        std::cout << "Server onMessage: "
-                  << *message << ", length: " << length << ", code: " << opCode << std::endl;
-    });
-
-    h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
-        res->end();
-    });
-
-    h.listen(3000);
-    h.connect("ws://localhost:3000", nullptr);
-    h.run();
-
-
-    //serveEventSource();
-    //serveHttp();
-    //serveBenchmark();
-
-#ifdef UWS_THREADSAFE
-    testThreadSafety();
-#endif
-
-    // These will run on Travis OS X
-//    std::cout << "---------testReceivePerformance-------" << std::endl;
-//    testReceivePerformance();
-//    std::cout << "---------testStress-------" << std::endl;
-//    testStress();
-//    std::cout << "---------testHTTP-------" << std::endl;
-//    testHTTP();
-//    std::cout << "---------testSmallSends-------" << std::endl;
-//    testSmallSends();
-//    std::cout << "---------testSendCallback-------" << std::endl;
-//    testSendCallback();
-//    std::cout << "---------testRouting-------" << std::endl;
-//    testRouting();
-//    std::cout << "---------testClosing-------" << std::endl;
-//    testClosing();
-//    std::cout << "---------testListening-------" << std::endl;
-//    testListening();
-//    std::cout << "---------testBroadcast-------" << std::endl;
-//    testBroadcast();
-//    std::cout << "---------testMessageBatch-------" << std::endl;
-//    testMessageBatch();
-//    std::cout << "---------testAutoPing-------" << std::endl;
-//    testAutoPing();
-//    std::cout << "---------testConnections-------" << std::endl;
-//    testConnections();
-//    std::cout << "---------testTransfers-------" << std::endl;
-//    testTransfers();
-
-    // Linux-only feature
-#ifdef __linux__
-    testReusePort();
-#endif
-
-    //testAutobahn();
-}

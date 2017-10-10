@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/main.cpp">
+		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp">
 			<Option target="Websocket_server"/>
 		</Unit>
 		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeLists.txt">

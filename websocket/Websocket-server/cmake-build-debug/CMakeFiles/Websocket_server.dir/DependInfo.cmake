@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ben/app/tests-for-c/websocket/Websocket-server/main.cpp" "/home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles/Websocket_server.dir/main.cpp.o"
+  "/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp" "/home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

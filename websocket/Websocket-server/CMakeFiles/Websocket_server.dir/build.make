@@ -46,7 +46,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Websocket_server.dir/depend.make
@@ -58,8 +58,8 @@ include CMakeFiles/Websocket_server.dir/progress.make
 include CMakeFiles/Websocket_server.dir/flags.make
 
 CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o: CMakeFiles/Websocket_server.dir/flags.make
-CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o: ../tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o"
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o -c /home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp
 
 CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.i: cmake_force
@@ -81,18 +81,44 @@ CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib
 CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o.provides.build: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o
 
 
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o: CMakeFiles/Websocket_server.dir/flags.make
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o -c /home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp
+
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp > CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.i
+
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp -o CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.s
+
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.requires:
+
+.PHONY : CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.requires
+
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.provides: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.provides.build
+.PHONY : CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.provides
+
+CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.provides.build: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o
+
+
 # Object files for target Websocket_server
 Websocket_server_OBJECTS = \
-"CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o"
+"CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o" \
+"CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o"
 
 # External object files for target Websocket_server
 Websocket_server_EXTERNAL_OBJECTS =
 
 Websocket_server: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o
+Websocket_server: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o
 Websocket_server: CMakeFiles/Websocket_server.dir/build.make
 Websocket_server: /usr/lib/libuWS.so
 Websocket_server: CMakeFiles/Websocket_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Websocket_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Websocket_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Websocket_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +127,7 @@ CMakeFiles/Websocket_server.dir/build: Websocket_server
 .PHONY : CMakeFiles/Websocket_server.dir/build
 
 CMakeFiles/Websocket_server.dir/requires: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o.requires
+CMakeFiles/Websocket_server.dir/requires: CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebsocketTest.cpp.o.requires
 
 .PHONY : CMakeFiles/Websocket_server.dir/requires
 
@@ -109,6 +136,6 @@ CMakeFiles/Websocket_server.dir/clean:
 .PHONY : CMakeFiles/Websocket_server.dir/clean
 
 CMakeFiles/Websocket_server.dir/depend:
-	cd /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ben/app/tests-for-c/websocket/Websocket-server /home/ben/app/tests-for-c/websocket/Websocket-server /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles/Websocket_server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ben/app/tests-for-c/websocket/Websocket-server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ben/app/tests-for-c/websocket/Websocket-server /home/ben/app/tests-for-c/websocket/Websocket-server /home/ben/app/tests-for-c/websocket/Websocket-server /home/ben/app/tests-for-c/websocket/Websocket-server /home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles/Websocket_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Websocket_server.dir/depend
 
