@@ -1,0 +1,23 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+PROJECT(${MODULE_NAME})
+
+SET(${MODULE_NAME}_SOURCES
+   src/tsd/websocket/mib3/WebSocketTest.cpp
+   src/tsd/websocket/mib3/WebSocketTest.hpp
+)
+
+BUILD_ARTIFACT(lib ${${MODULE_NAME}_SOURCES})
+
+MODULE_DEPENDENCIES(PUBLIC
+   tsd.common
+   tsd.common.checksums
+   tsd.common.ini
+)
+
+MODULE_INCLUDE_DIRECTORIES(PRIVATE "${MODULE_PATH}/src")
+
+IF (TSD_BUILDENV_ENABLE_APP_TARGETS)
+   INCLUDE_DIRECTORIES("${MODULE_PATH}/src")
+ENDIF()
+
+ADD_SUBDIRECTORY(app)

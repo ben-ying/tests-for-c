@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp
-WebSocketTest.hpp
-/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketTest.hpp
+tsd/websocket/mib3/WebSocketTest.hpp
+/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/tsd/websocket/mib3/WebSocketTest.hpp
 uWS/uWS.h
 -
 thread
