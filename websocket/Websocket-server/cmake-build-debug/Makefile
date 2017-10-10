@@ -48,10 +48,10 @@ RM = /home/ben/Downloads/clion-2017.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server
+CMAKE_SOURCE_DIR = /home/ben/app/mib3/dev/src/Websocket-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/CMakeFiles /home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,314 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Websocket_server
+# Target rules for targets named WebSocket_server
 
 # Build rule for target.
-Websocket_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Websocket_server
-.PHONY : Websocket_server
+WebSocket_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WebSocket_server
+.PHONY : WebSocket_server
 
 # fast build rule for target.
-Websocket_server/fast:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/build
-.PHONY : Websocket_server/fast
+WebSocket_server/fast:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/build
+.PHONY : WebSocket_server/fast
 
-tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.o
 
-.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.o
 
 # target to build an object file
-tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o
-.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.o
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.o
 
-tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.i
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.i
 
-.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.i
 
 # target to preprocess a source file
-tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.i:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.i
-.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.i
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.i
 
-tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.s
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.s
 
-.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.s
 
 # target to generate assembly for a file
-tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.s:
-	$(MAKE) -f CMakeFiles/Websocket_server.dir/build.make CMakeFiles/Websocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.s
-.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp.s
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.cpp.s
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.o: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.o
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.o
+
+# target to build an object file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.o:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.o
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.o
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.i: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.i
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.i
+
+# target to preprocess a source file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.i:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.i
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.i
+
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.s: tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.s
+
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.s
+
+# target to generate assembly for a file
+tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.s:
+	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.s
+.PHONY : tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.s
 
 # Help Target
 help:
@@ -158,10 +428,40 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Websocket_server"
-	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.o"
-	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.i"
-	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.s"
+	@echo "... WebSocket_server"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Epoll.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Extensions.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Hub.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Networking.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Node.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocket.s"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.o"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.i"
+	@echo "... tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.s"
 .PHONY : help
 
 

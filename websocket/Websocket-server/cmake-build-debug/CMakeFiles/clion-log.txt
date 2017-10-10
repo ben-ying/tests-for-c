@@ -1,4 +1,4 @@
-/home/ben/Downloads/clion-2017.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ben/app/tests-for-c/websocket/Websocket-server
+/home/ben/Downloads/clion-2017.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ben/app/mib3/dev/src/Websocket-server
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ben/app/tests-for-c/websocket/Websocket-server
+-- Build files have been written to: /home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug

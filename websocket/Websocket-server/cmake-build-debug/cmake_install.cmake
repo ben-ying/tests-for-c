@@ -1,4 +1,4 @@
-# Install script for directory: /home/ben/app/tests-for-c/websocket/Websocket-server
+# Install script for directory: /home/ben/app/mib3/dev/src/Websocket-server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ben/app/tests-for-c/websocket/Websocket-server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

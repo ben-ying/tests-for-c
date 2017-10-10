@@ -26,8 +26,8 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="236">
+              <caret line="39" column="48" lean-forward="true" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            <state relative-caret-position="382">
+              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -53,26 +53,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Makefile2" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeFiles/Makefile2">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,21 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Websocket_server.cbp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Websocket_server.cbp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1311">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WebSocketServer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="27" />
+            <state relative-caret-position="-1023">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -106,37 +76,71 @@
       <file leaf-file-name="WebSocketTest.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="392" column="37" lean-forward="false" selection-start-line="392" selection-start-column="37" selection-end-line="392" selection-end-column="37" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#505#528#0" expanded="false" />
-                <element signature="e#3026#3334#0" expanded="false" />
-                <element signature="e#3336#7154#0" expanded="false" />
-                <element signature="e#7625#10884#0" expanded="false" />
-                <element signature="e#10886#11712#0" expanded="false" />
-                <element signature="e#11714#13968#0" expanded="false" />
-                <element signature="e#15784#17233#0" expanded="false" />
-                <element signature="e#17821#21986#0" expanded="false" />
-                <element signature="e#21988#23018#0" expanded="false" />
-                <element signature="e#23020#24028#0" expanded="false" />
-                <element signature="e#24030#24716#0" expanded="false" />
-                <element signature="e#24718#26174#0" expanded="false" />
-                <element signature="e#26176#34487#0" expanded="false" />
-                <element signature="e#34489#37095#0" expanded="false" />
-                <element signature="e#37097#37487#0" expanded="false" />
-                <element signature="e#37489#39950#0" expanded="false" />
-                <element signature="e#39952#42285#0" expanded="false" />
+                <element signature="e#501#524#0" expanded="false" />
+                <element signature="e#3022#3330#0" expanded="false" />
+                <element signature="e#3332#7150#0" expanded="false" />
+                <element signature="e#7621#10880#0" expanded="false" />
+                <element signature="e#10882#11708#0" expanded="false" />
+                <element signature="e#11710#13964#0" expanded="false" />
+                <element signature="e#15780#17229#0" expanded="false" />
+                <element signature="e#17817#21982#0" expanded="false" />
+                <element signature="e#21984#23014#0" expanded="false" />
+                <element signature="e#23016#24024#0" expanded="false" />
+                <element signature="e#24026#24712#0" expanded="false" />
+                <element signature="e#24714#26170#0" expanded="false" />
+                <element signature="e#26172#34483#0" expanded="false" />
+                <element signature="e#34485#37091#0" expanded="false" />
+                <element signature="e#37093#37483#0" expanded="false" />
+                <element signature="e#37485#39946#0" expanded="false" />
+                <element signature="e#39948#42281#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebSocketTest.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.hpp">
+      <file leaf-file-name="WebSocketProtocol.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketProtocol.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding>
+                <element signature="e#141#164#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPSocket.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPSocket.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-143">
+              <caret line="117" column="31" lean-forward="false" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Group.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -146,16 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>testReceivePerformance</find>
-      <find>testStress</find>
-      <find>Messages per</find>
-      <find>10</find>
-      <find>&lt; 10</find>
-      <find>testRouting</find>
-      <find>---------</find>
-      <find>uWS::CLIENT</find>
-      <find>testAutoPing</find>
-      <find>testSmallSends</find>
       <find>testHTTP</find>
       <find>testListening</find>
       <find>res-&gt;end</find>
@@ -176,6 +170,16 @@
       <find>rsi</find>
       <find>MODULE_PATH</find>
       <find>Websocket</find>
+      <find>ben/app/</find>
+      <find>ARTIFACT_INCLUDE_DIRECTORIES</find>
+      <find>s</find>
+      <find>MODULE_INCLUDE_DIRECTORIES</find>
+      <find>socket</find>
+      <find>socke</find>
+      <find>`</find>
+      <find>SSL_write</find>
+      <find>INTERFACE_INCLUDE_DIRECTORIES</find>
+      <find>SHA1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,10 +197,10 @@
         <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebsocketServer.cpp" />
         <option value="$PROJECT_DIR$/CMakeFiles/Makefile2" />
         <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.hpp" />
-        <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp" />
-        <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp" />
+        <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp" />
+        <option value="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
@@ -209,8 +213,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="341" />
-    <option name="y" value="85" />
+    <option name="x" value="261" />
+    <option name="y" value="24" />
     <option name="width" value="1247" />
     <option name="height" value="826" />
   </component>
@@ -263,48 +267,6 @@
               <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="tsd.websocket.mib3" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WebSocket_server" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Websocket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd-websocket-mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd.websocket.mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSocket_server" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Websocket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd-websocket-mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd.websocket.mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSocket_server" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Websocket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd-websocket-mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd.websocket.mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSocket_server" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Websocket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd-websocket-mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd.websocket.mib3" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tsd" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="mib3" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -313,17 +275,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/CMakeLists.txt" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3" />
       <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app" />
       <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace" />
       <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3" />
       <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -342,13 +305,6 @@
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WebSocket_server" TARGET_NAME="WebSocket_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WebSocket_server" RUN_TARGET_NAME="WebSocket_server">
       <envs />
     </configuration>
-    <configuration name="WebSocket_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WebSocket_server" TARGET_NAME="WebSocket_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WebSocket_server" RUN_TARGET_NAME="WebSocket_server">
-      <envs />
-    </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
-      <item index="1" class="java.lang.String" itemvalue="Application.WebSocket_server" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -371,35 +327,46 @@
       <workItem from="1507531859722" duration="5075000" />
       <workItem from="1507598152356" duration="829000" />
       <workItem from="1507600670621" duration="4563000" />
+      <workItem from="1507606625268" duration="901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21154000" />
+    <option name="totallyTimeSpent" value="26455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="341" y="85" width="1247" height="826" extended-state="0" />
-    <editor active="true" />
+    <frame x="261" y="24" width="1247" height="826" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2984218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2697274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32389677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24562864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25306958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3529412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2697274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25306958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3529412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,55 +414,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/websocketpp/config/core.hpp" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocketpp/config/asio_no_tls.hpp" />
-    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocketpp/http/impl/parser.hpp" />
-    <entry file="file://$PROJECT_DIR$/websocketpp/transport/asio/base.hpp" />
-    <entry file="file://$PROJECT_DIR$/websocketpp/base64/base64.hpp" />
-    <entry file="file://$PROJECT_DIR$/websocketpp/config/core.hpp" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocketpp/config/asio_no_tls.hpp" />
-    <entry file="file://$PROJECT_DIR$/websocketpp/http/impl/parser.hpp" />
-    <entry file="file://$PROJECT_DIR$/websocketpp/server.hpp" />
-    <entry file="file://$PROJECT_DIR$/websocketpp/config/core.hpp" />
-    <entry file="file:///usr/include/c++/5/functional">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/websocketpp/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/websocketpp/base64/base64.hpp" />
     <entry file="file://$PROJECT_DIR$/websocketpp/http/impl/parser.hpp" />
@@ -551,20 +469,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/easywsclient/Makefile" />
-    <entry file="file:///usr/include/uWS/uWS.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/openssl/ssl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="2335" column="4" lean-forward="false" selection-start-line="2335" selection-start-column="4" selection-end-line="2335" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/zlib.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -572,26 +476,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/uWS/Socket.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/thread">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2755">
           <caret line="145" column="7" lean-forward="false" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/uWS/Hub.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,70 +487,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3591">
           <caret line="189" column="9" lean-forward="false" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Websocket_server.cbp" />
+    <entry file="file://$PROJECT_DIR$/Makefile" />
+    <entry file="file://$PROJECT_DIR$/cmake_install.cmake" />
+    <entry file="file://$PROJECT_DIR$/CMakeCache.txt" />
+    <entry file="file:///usr/local/include/boost/asio/ssl/detail/impl/engine.ipp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="315" column="11" lean-forward="false" selection-start-line="315" selection-start-column="11" selection-end-line="315" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeFiles/Makefile2">
+    <entry file="file:///usr/include/openssl/ssl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="116">
+          <caret line="2334" column="13" lean-forward="false" selection-start-line="2334" selection-start-column="13" selection-end-line="2334" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Websocket_server.cbp">
+    <entry file="file:///usr/include/uWS/uWS.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1311">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="57">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.hpp">
+    <entry file="file:///usr/include/uWS/Hub.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="149">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp">
+    <entry file="file:///usr/include/uWS/Socket.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#505#528#0" expanded="false" />
-            <element signature="e#3026#3334#0" expanded="false" />
-            <element signature="e#3336#7154#0" expanded="false" />
-            <element signature="e#7625#10884#0" expanded="false" />
-            <element signature="e#10886#11712#0" expanded="false" />
-            <element signature="e#11714#13968#0" expanded="false" />
-            <element signature="e#15784#17233#0" expanded="false" />
-            <element signature="e#17821#21986#0" expanded="false" />
-            <element signature="e#21988#23018#0" expanded="false" />
-            <element signature="e#23020#24028#0" expanded="false" />
-            <element signature="e#24030#24716#0" expanded="false" />
-            <element signature="e#24718#26174#0" expanded="false" />
-            <element signature="e#26176#34487#0" expanded="false" />
-            <element signature="e#34489#37095#0" expanded="false" />
-            <element signature="e#37097#37487#0" expanded="false" />
-            <element signature="e#37489#39950#0" expanded="false" />
-            <element signature="e#39952#42285#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="57">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/CMakeLists.txt">
+    <entry file="file:///usr/include/uWS/Networking.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -670,18 +542,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Asio.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Backend.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/uWS.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/uWS/Epoll.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/mutex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -694,10 +590,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Socket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeFiles/WebSocket_server.dir/build.make">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="392" column="37" lean-forward="false" selection-start-line="392" selection-start-column="37" selection-end-line="392" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#501#524#0" expanded="false" />
+            <element signature="e#3022#3330#0" expanded="false" />
+            <element signature="e#3332#7150#0" expanded="false" />
+            <element signature="e#7621#10880#0" expanded="false" />
+            <element signature="e#10882#11708#0" expanded="false" />
+            <element signature="e#11710#13964#0" expanded="false" />
+            <element signature="e#15780#17229#0" expanded="false" />
+            <element signature="e#17817#21982#0" expanded="false" />
+            <element signature="e#21984#23014#0" expanded="false" />
+            <element signature="e#23016#24024#0" expanded="false" />
+            <element signature="e#24026#24712#0" expanded="false" />
+            <element signature="e#24714#26170#0" expanded="false" />
+            <element signature="e#26172#34483#0" expanded="false" />
+            <element signature="e#34485#37091#0" expanded="false" />
+            <element signature="e#37093#37483#0" expanded="false" />
+            <element signature="e#37485#39946#0" expanded="false" />
+            <element signature="e#39948#42281#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#141#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/Group.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/HTTPSocket.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-143">
+          <caret line="117" column="31" lean-forward="false" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1023">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeFiles/Makefile2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="39" column="48" lean-forward="true" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="382">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
           <folding />
         </state>
       </provider>

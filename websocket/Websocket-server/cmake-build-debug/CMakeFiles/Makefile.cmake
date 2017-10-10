@@ -44,5 +44,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Websocket_server.dir/DependInfo.cmake"
+  "CMakeFiles/WebSocket_server.dir/DependInfo.cmake"
   )

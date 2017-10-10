@@ -1,7 +1,7 @@
 // NOTE: This is not part of the library, this file holds examples and tests
-#include "WebSocketTest.hpp"
+#include "tsd/websocket/mib3/WebSocketTest.hpp"
+#include "tsd/websocket/mib3/uWS.h"
 
-#include <uWS/uWS.h>
 #include <thread>
 #include <fstream>
 #include <set>
