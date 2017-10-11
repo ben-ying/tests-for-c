@@ -54,10 +54,10 @@ RM = /home/ben/Downloads/clion-2017.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server
+CMAKE_SOURCE_DIR = /home/ben/app/mib3/dev/src/Websocket-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server
+CMAKE_BINARY_DIR = /home/ben/app/mib3/dev/src/Websocket-server
 
 #=============================================================================
 # Target rules for target CMakeFiles/WebSocket_server.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/ben/app/tests-for-c/websocket/Websocket-server
 CMakeFiles/WebSocket_server.dir/all:
 	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/depend
 	$(MAKE) -f CMakeFiles/WebSocket_server.dir/build.make CMakeFiles/WebSocket_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles --progress-num=1,2,3 "Built target WebSocket_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ben/app/mib3/dev/src/Websocket-server/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target WebSocket_server"
 .PHONY : CMakeFiles/WebSocket_server.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/WebSocket_server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/WebSocket_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/mib3/dev/src/Websocket-server/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WebSocket_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/app/mib3/dev/src/Websocket-server/CMakeFiles 0
 .PHONY : CMakeFiles/WebSocket_server.dir/rule
 
 # Convenience name for target.

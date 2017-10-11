@@ -40,6 +40,7 @@ INCLUDE_DIRECTORIES("tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src")
 add_executable(WebSocket_server ${SOURCE_FILES})
 
 #target_link_libraries(WebSocket_server /usr/lib/libuWS.so)
+target_link_libraries(WebSocket_server crypto)
 target_link_libraries(WebSocket_server ssl)
 target_link_libraries(WebSocket_server z)
 target_link_libraries(WebSocket_server pthread)
