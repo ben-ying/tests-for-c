@@ -4,28 +4,28 @@ PROJECT(${MODULE_NAME})
 SET(${MODULE_NAME}_SOURCES
         src/tsd/websocket/mib3/WebSocketTest.cpp
         src/tsd/websocket/mib3/WebSocketTest.hpp
-        src/tsd/websocket/mib3/Asio.h
-        src/tsd/websocket/mib3/Backend.h
-        src/tsd/websocket/mib3/Epoll.cpp
-        src/tsd/websocket/mib3/Epoll.h
-        src/tsd/websocket/mib3/Extensions.cpp
-        src/tsd/websocket/mib3/Extensions.h
-        src/tsd/websocket/mib3/Group.cpp
-        src/tsd/websocket/mib3/Group.h
-        src/tsd/websocket/mib3/HTTPSocket.cpp
-        src/tsd/websocket/mib3/HTTPSocket.h
-        src/tsd/websocket/mib3/Hub.cpp
-        src/tsd/websocket/mib3/Hub.h
-        src/tsd/websocket/mib3/Libuv.h
-        src/tsd/websocket/mib3/Networking.cpp
-        src/tsd/websocket/mib3/Networking.h
-        src/tsd/websocket/mib3/Node.cpp
-        src/tsd/websocket/mib3/Node.h
-        src/tsd/websocket/mib3/Socket.cpp
-        src/tsd/websocket/mib3/Socket.h
-        src/tsd/websocket/mib3/uWS.h
-        src/tsd/websocket/mib3/WebSocket.cpp
-        src/tsd/websocket/mib3/WebSocket.h
+        src/tsd/websocket/uws/Asio.h
+        src/tsd/websocket/uws/Backend.h
+        src/tsd/websocket/uws/Epoll.cpp
+        src/tsd/websocket/uws/Epoll.h
+        src/tsd/websocket/uws/Extensions.cpp
+        src/tsd/websocket/uws/Extensions.h
+        src/tsd/websocket/uws/Group.cpp
+        src/tsd/websocket/uws/Group.h
+        src/tsd/websocket/uws/HTTPSocket.cpp
+        src/tsd/websocket/uws/HTTPSocket.h
+        src/tsd/websocket/uws/Hub.cpp
+        src/tsd/websocket/uws/Hub.h
+        src/tsd/websocket/uws/Libuv.h
+        src/tsd/websocket/uws/Networking.cpp
+        src/tsd/websocket/uws/Networking.h
+        src/tsd/websocket/uws/Node.cpp
+        src/tsd/websocket/uws/Node.h
+        src/tsd/websocket/uws/Socket.cpp
+        src/tsd/websocket/uws/Socket.h
+        src/tsd/websocket/uws/uWS.h
+        src/tsd/websocket/uws/WebSocket.cpp
+        src/tsd/websocket/uws/WebSocket.h
         )
 
 BUILD_ARTIFACT(lib ${${MODULE_NAME}_SOURCES})
@@ -35,12 +35,14 @@ MODULE_DEPENDENCIES(PUBLIC
         tsd.common.checksums
         tsd.common.ini
         ext.openssl
+#        ext.libuWS
         )
 
 MODULE_INCLUDE_DIRECTORIES(PUBLIC "${MODULE_PATH}/src")
 
-IF (TSD_BUILDENV_ENABLE_APP_TARGETS)
-    INCLUDE_DIRECTORIES("${MODULE_PATH}/src")
-ENDIF ()
+#IF (TSD_BUILDENV_ENABLE_APP_TARGETS)
+#    INCLUDE_DIRECTORIES("${MODULE_PATH}/src")
+#ENDIF ()
 
 ADD_SUBDIRECTORY(app)
+

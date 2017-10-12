@@ -1,5 +1,6 @@
 #include "WebSocketTest.hpp"
-#include "uWS.h"
+//#include "uWS.h"
+#include <uWS/uWS.h>
 #include <thread>
 #include <fstream>
 #include <set>
