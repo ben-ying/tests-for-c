@@ -1,3 +1,0 @@
-/home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ben/app/mib3/dev/src/Websocket-server/cmake-build-debug/CMakeFiles/WebSocket_server.dir
