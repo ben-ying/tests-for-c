@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp" "/home/ben/app/mib3/dev/src/Websocket-server/CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.o"
-  "/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp" "/home/ben/app/mib3/dev/src/Websocket-server/CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.o"
+  "/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp" "/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp.o"
+  "/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp" "/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeFiles/WebSocket_server.dir/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
