@@ -8,100 +8,116 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ben/app/mib3/dev/src/Websocket-server"/>
+				<Option working_dir="/home/ben/app/tests-for-c/websocket/Websocket-server"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ben/app/mib3/dev/src/Websocket-server"/>
+				<Option working_dir="/home/ben/app/tests-for-c/websocket/Websocket-server"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ben/app/mib3/dev/src/Websocket-server"/>
+				<Option working_dir="/home/ben/app/tests-for-c/websocket/Websocket-server"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="WebSocket_server">
-				<Option output="/home/ben/app/mib3/dev/src/Websocket-server/WebSocket_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ben/app/mib3/dev/src/Websocket-server"/>
+				<Option output="/home/ben/app/tests-for-c/websocket/Websocket-server/WebSocket_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ben/app/tests-for-c/websocket/Websocket-server"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/main/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/main/src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 WebSocket_server"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 WebSocket_server"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="WebSocket_server/fast">
-				<Option output="/home/ben/app/mib3/dev/src/Websocket-server/WebSocket_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ben/app/mib3/dev/src/Websocket-server"/>
+				<Option output="/home/ben/app/tests-for-c/websocket/Websocket-server/WebSocket_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ben/app/tests-for-c/websocket/Websocket-server"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/src"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/public"/>
-					<Add directory="/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/main/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/src"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/public"/>
+					<Add directory="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/main/src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 WebSocket_server/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ben/app/mib3/dev/src/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 WebSocket_server/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/ben/app/tests-for-c/websocket/Websocket-server/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
+		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app/tsd/websocket/mib3/WebSocketServer.cpp">
 			<Option target="WebSocket_server"/>
 		</Unit>
-		<Unit filename="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp">
+		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.cpp">
 			<Option target="WebSocket_server"/>
 		</Unit>
-		<Unit filename="/home/ben/app/mib3/dev/src/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.hpp">
+		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/WebSocketTest.hpp">
 			<Option target="WebSocket_server"/>
 		</Unit>
-		<Unit filename="/home/ben/app/mib3/dev/src/Websocket-server/CMakeLists.txt">
+		<Unit filename="/home/ben/app/tests-for-c/websocket/Websocket-server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
