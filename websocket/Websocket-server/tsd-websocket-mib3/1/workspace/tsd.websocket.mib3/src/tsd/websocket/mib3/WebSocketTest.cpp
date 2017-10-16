@@ -14,6 +14,28 @@ WebSocketTest::~WebSocketTest() {
 
 }
 
+void WebSocketTest::testSimple() {
+    uWS::Hub h;
+
+    h.onConnection([](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
+        std::cout << "Server Connected" << std::endl;
+        ws->send("112233");
+    });
+
+    h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
+        std::cout << "Server onMessage: "
+                  << *message << ", length: " << length << ", code: " << opCode << std::endl;
+    });
+
+    h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
+        res->end();
+    });
+
+    h.listen(3000);
+    h.connect("ws://localhost:3000", nullptr);
+    h.run();
+}
+
 int WebSocketTest::countOccurrences(std::string word, std::string &document) {
     int count = 0;
     for (size_t pos = document.find(word); pos != std::string::npos; pos = document.find(word, pos + word.length())) {
@@ -208,16 +230,16 @@ void WebSocketTest::measureInternalThroughput(unsigned int payloadLength, int ec
 }
 
 void WebSocketTest::testStress() {
-    for (int i = 0; i < 25; i++) {
-        int payloadLength = std::pow(2, i);
-        int echoes = 1;//std::max<int>(std::pow(2, 24 - i) / 50, 1);
-
-        std::cout << "[Size: " << payloadLength << ", echoes: " << echoes << "]" << std::endl;
-        for (int ssl = 0; ssl < 2; ssl++) {
-            std::cout << "SSL: " << bool(ssl) << std::endl;
-            measureInternalThroughput(payloadLength, echoes, ssl);
-        }
-    }
+//    for (int i = 0; i < 25; i++) {
+//        int payloadLength = std::pow(2, i);
+//        int echoes = 1;//std::max<int>(std::pow(2, 24 - i) / 50, 1);
+//
+//        std::cout << "[Size: " << payloadLength << ", echoes: " << echoes << "]" << std::endl;
+//        for (int ssl = 0; ssl < 2; ssl++) {
+//            std::cout << "SSL: " << bool(ssl) << std::endl;
+//            measureInternalThroughput(payloadLength, echoes, ssl);
+//        }
+//    }
 }
 
 void WebSocketTest::testConnections() {

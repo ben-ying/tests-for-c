@@ -35,6 +35,8 @@ MODULE_DEPENDENCIES(PUBLIC
         tsd.common.checksums
         tsd.common.ini
         ext.openssl
+        tsd.audioclient.app.audio
+        tsd.audioclient.app.common
 #        ext.libuWS
         )
 

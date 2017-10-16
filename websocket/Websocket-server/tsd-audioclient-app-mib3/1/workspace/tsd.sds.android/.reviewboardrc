@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://reviewboard.mib3.technisat-digital/reviewboard"
+REPOSITORY = "tsd.sds.tts"
+BRANCH = "develop"
+LAND_DEST_BRANCH = "develop"
+

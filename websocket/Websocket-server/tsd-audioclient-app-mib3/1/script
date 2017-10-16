@@ -1,0 +1,27 @@
+set -o errtrace
+set -o nounset
+set -o pipefail
+trap 'RET=$? ; echo "[31;1mStep failed on line ${LINENO}: Exit status ${RET}; Command:[0;31m ${BASH_COMMAND}[0m" >&2 ; exit $RET' ERR
+trap 'for i in "${_BOB_TMP_CLEANUP[@]-}" ; do rm -f "$i" ; done' EXIT
+
+# Special args:
+declare -A BOB_ALL_PATHS=(  )
+declare -A BOB_DEP_PATHS=(  )
+declare -A BOB_TOOL_PATHS=(  )
+# Environment:
+export BOB_CWD=/home/ben/app/mib3/dev/src/Websocket-server/tsd-audioclient-app-mib3/1/workspace
+export LD_LIBRARY_PATH=''
+export PATH=/opt/Java/jdk1.8.0_141/bin:/opt/Java/jdk1.8.0_141/jre/bin:/home/ben/app/BobBuildTool:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/home/ben/bin:/opt/Java/jdk1.8.0_141/bin:/opt/Java/jdk1.8.0_141/jre/bin:/home/ben/app/BobBuildTool:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/home/ben/bin:/opt/Java/jdk1.8.0_141/bin:/opt/Java/jdk1.8.0_141/jre/bin:/home/ben/app/BobBuildTool:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/home/ben/bin:/opt/Java/jdk1.8.0_141/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ben/sda4/Android/Sdk/platform-tools/adb:/home/ben/sda4/Android/Sdk/platform-tools/adb:/home/ben/sda4/Android/Sdk/platform-tools/adb
+declare -p > ../env
+
+# BEGIN BUILD SCRIPT
+cat >CMakeLists.txt <<'EOF'
+project(ROOT)
+cmake_minimum_required(VERSION 3.0)
+
+# Let's rock...
+include(TsdBuildenv)
+collect_modules()
+EOF
+
+# END BUILD SCRIPT

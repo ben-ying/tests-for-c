@@ -9,29 +9,32 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <atomic>
+#include <tsd/common/types/SmartPtr.hpp>
+#include "tsd/sds/android/app/ClientManager.hpp"
+#include "tsd/sds/android/app/audio/SyncAudioOut.hpp"
+
 
 int main(int argc, char *argv[]) {
-    uWS::Hub h;
+    std::cout << "App Starting..." << std::endl;
 
-    h.onConnection([](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
-        std::cout << "Server Connected" << std::endl;
-        ws->send("112233");
-    });
-
-    h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
-        std::cout << "Server onMessage: "
-                  << *message << ", length: " << length << ", code: " << opCode << std::endl;
-    });
-
-    h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
-        res->end();
-    });
-
-    h.listen(3000);
-    h.connect("ws://localhost:3000", nullptr);
-    h.run();
+    tsd::sds::android::app::ClientManager *cm =
+            new tsd::sds::android::app::ClientManager();
+    tsd::common::types::SmartPtr<tsd::sds::android::app::audio::IAudioFactory> af
+            = cm->getAudioFactory();
+    std::set<std::string> &channelIds = af->getAudioSourceIds();
+    std::cout << "channelIds size: " << channelIds.size() << std::endl;
+    for (auto element : channelIds) {
+        std::cout << "channelId: " << element << std::endl;
+        // sync audio out, that shall be used in the core to write samples
+//        tsd::common::types::SmartPtr<tsd::sds::android::core::backend::playback::IAudioOut> audioOut = af.getAudioOut(element);
+//        if ("TTS" == element){
+//            audioOut->writeSamples(samples, len); //填充要写入的sample
+//        }
+    }
 
     std::shared_ptr<WebSocketTest> webSocketTest(new WebSocketTest());
+
+//    webSocketTest->testSimple();
     //serveEventSource();
     //serveHttp();
     //serveBenchmark();
@@ -66,7 +69,7 @@ int main(int argc, char *argv[]) {
 //    std::cout << "---------testConnections-------" << std::endl;
 //    testConnections();
 //    std::cout << "---------testTransfers-------" << std::endl;
-    webSocketTest->testTransfers();
+//    webSocketTest->testTransfers();
 
     // Linux-only feature
 #ifdef __linux__

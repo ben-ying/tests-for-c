@@ -12,6 +12,21 @@ set(SOURCE_FILES
 
 INCLUDE_DIRECTORIES("tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app")
 INCLUDE_DIRECTORIES("tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/public")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/src")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.sds.android/public")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/public")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.sds.android.common/src")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/public")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/audio/src")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/public")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/common/src")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/src")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/public")
+INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/main/src")
+#INCLUDE_DIRECTORIES("tsd.sds.android/public/tsd/sds/android/core/backend/playback")
+#INCLUDE_DIRECTORIES("tsd.sds.android.common/public/tsd/sds/android/common")
+#INCLUDE_DIRECTORIES("tsd.sds.android.common/src/tsd/sds/android/common")
 
 add_executable(WebSocket_server ${SOURCE_FILES})
 

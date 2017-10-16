@@ -11,6 +11,7 @@ public:
     virtual ~WebSocketTest();
 
 public:
+    void testSimple();
     int countOccurrences(std::string word, std::string &document);
     void serveBenchmark();
     void measureInternalThroughput(unsigned int payloadLength, int echoes, bool ssl);
