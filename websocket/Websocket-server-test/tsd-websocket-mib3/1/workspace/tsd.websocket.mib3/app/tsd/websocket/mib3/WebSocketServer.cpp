@@ -1,5 +1,6 @@
 // NOTE: This is not part of the library, this file holds examples and tests
 #include "tsd/websocket/mib3/WebSocketTest.hpp"
+#include "tsd/websocket/mib3/json.hpp"
 //#include "tsd/websocket/mib3/uWS.h"
 #include "tsd/websocket/uws/uWS.h"
 
@@ -9,18 +10,36 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <atomic>
+using nlohmann::json;
+
+enum Type {
+    TYPE_MESSAGE, TYPE_FILE, TYPE_REQUEST_FILE
+};
+
+void send_socket(uWS::WebSocket<uWS::SERVER> *ws) {
+    std::ifstream i("../socket.json");
+    json j;
+    i >> j;
+    j["type"] = TYPE_MESSAGE;
+    j["file_size"] = 0;
+    j["name"] = "";
+    j["data"] = "";
+    j["message"] = "server test message";
+    ws->send(j.dump().c_str());
+}
 
 int main(int argc, char *argv[]) {
     uWS::Hub h;
 
     h.onConnection([](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
         std::cout << "Server Connected" << std::endl;
-        ws->send("112233");
     });
 
     h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
+        std::string message_str(message);
         std::cout << "Server onMessage: "
-                  << *message << ", length: " << length << ", code: " << opCode << std::endl;
+                  << message_str.substr(0, length) << ", length: " << length << ", code: " << opCode << std::endl;
+        send_socket(ws);
     });
 
     h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
@@ -46,7 +65,8 @@ int main(int argc, char *argv[]) {
     });
 
     h.listen(3000);
-    h.connect("ws://192.168.1.10:3000", nullptr);
+    h.connect("ws://127.0.0.1:3000", nullptr);
+//    h.connect("ws://192.168.1.10:3000", nullptr);
     h.run();
 
     std::shared_ptr<WebSocketTest> webSocketTest(new WebSocketTest());

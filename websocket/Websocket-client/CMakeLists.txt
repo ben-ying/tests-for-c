@@ -4,7 +4,8 @@ project(Websocket_client)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        main.cpp)
+        main.cpp
+        json.hpp)
 
 add_executable(Websocket_client ${SOURCE_FILES})
 
