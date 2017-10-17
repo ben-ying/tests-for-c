@@ -27,8 +27,26 @@ int main(int argc, char *argv[]) {
         res->end();
     });
 
+    h.onDisconnection([](uWS::WebSocket<uWS::SERVER> *ws, int code, char *message, size_t length) {
+        std::cout << "CLIENT CLOSE: " << code << std::endl;
+    });
+
+    h.onError([](int port) {
+        switch (port) {
+            case 80:
+                std::cout << "Server emits error listening to port 80 (permission denied)" << std::endl;
+                break;
+            case 3000:
+                std::cout << "Server emits error listening to port 3000 twice" << std::endl;
+                break;
+            default:
+                std::cout << "FAILURE: port " << port << " should not emit error" << std::endl;
+                exit(-1);
+        }
+    });
+
     h.listen(3000);
-    h.connect("ws://localhost:3000", nullptr);
+    h.connect("ws://192.168.1.10:3000", nullptr);
     h.run();
 
     std::shared_ptr<WebSocketTest> webSocketTest(new WebSocketTest());
