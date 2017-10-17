@@ -24,6 +24,8 @@ INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mi
 INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/src")
 INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/config/public")
 INCLUDE_DIRECTORIES("tsd-audioclient-app-mib3/1/workspace/tsd.audioclient.app.mib3/main/src")
+INCLUDE_DIRECTORIES("tsd-dataformats/1/workspace/tsd.dataformats/src")
+INCLUDE_DIRECTORIES("tsd-dataformats/1/workspace/tsd.dataformats/public")
 #INCLUDE_DIRECTORIES("tsd.sds.android/public/tsd/sds/android/core/backend/playback")
 #INCLUDE_DIRECTORIES("tsd.sds.android.common/public/tsd/sds/android/common")
 #INCLUDE_DIRECTORIES("tsd.sds.android.common/src/tsd/sds/android/common")

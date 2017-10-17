@@ -9,32 +9,53 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <atomic>
+#include <string>
 #include <tsd/common/types/SmartPtr.hpp>
 #include "tsd/sds/android/app/ClientManager.hpp"
 #include "tsd/sds/android/app/audio/SyncAudioOut.hpp"
 
+#include <tsd/dataformats/data/visitor.hpp>
+#include <tsd/dataformats/data/object.hpp>
+namespace data = tsd::dataformats::data;
+
 
 int main(int argc, char *argv[]) {
     std::cout << "App Starting..." << std::endl;
+//    std::string str = "{\"key\": 1}";
+//    std::unique_ptr<tsd::dataformats::data::Value> value =
+//            tsd::dataformats::json::valueFromJsonString(str);
 
-    tsd::sds::android::app::ClientManager *cm =
-            new tsd::sds::android::app::ClientManager();
-    tsd::common::types::SmartPtr<tsd::sds::android::app::audio::IAudioFactory> af
-            = cm->getAudioFactory();
-    std::set<std::string> &channelIds = af->getAudioSourceIds();
-    std::cout << "channelIds size: " << channelIds.size() << std::endl;
-    for (auto element : channelIds) {
-        std::cout << "channelId: " << element << std::endl;
-        // sync audio out, that shall be used in the core to write samples
-//        tsd::common::types::SmartPtr<tsd::sds::android::core::backend::playback::IAudioOut> audioOut = af.getAudioOut(element);
-//        if ("TTS" == element){
-//            audioOut->writeSamples(samples, len); //填充要写入的sample
-//        }
-    }
+//    tsd::dataformats::json::Parser p;
+//    tsd::dataformats::json::Tokenizer tok(p);
+//    tok.handleData(buf);
+//
+//    tsd::dataformats::data::Value* val = NULL;
+//    bool result = p.extractValue(val);
+//
+//
+//    Visitor vis;
+//    vis.visit(val);
+
+//    std::cout << "object: " << vis.str() << std::endl;
+
+//    tsd::sds::android::app::ClientManager *cm =
+//            new tsd::sds::android::app::ClientManager();
+//    tsd::common::types::SmartPtr<tsd::sds::android::app::audio::IAudioFactory> af
+//            = cm->getAudioFactory();
+//    std::set<std::string> &channelIds = af->getAudioSourceIds();
+//    std::cout << "channelIds size: " << channelIds.size() << std::endl;
+//    for (auto element : channelIds) {
+//        std::cout << "channelId: " << element << std::endl;
+//        // sync audio out, that shall be used in the core to write samples
+////        tsd::common::types::SmartPtr<tsd::sds::android::core::backend::playback::IAudioOut> audioOut = af.getAudioOut(element);
+////        if ("TTS" == element){
+////            audioOut->writeSamples(samples, len); //填充要写入的sample
+////        }
+//    }
 
     std::shared_ptr<WebSocketTest> webSocketTest(new WebSocketTest());
 
-//    webSocketTest->testSimple();
+    webSocketTest->testSimple();
     //serveEventSource();
     //serveHttp();
     //serveBenchmark();

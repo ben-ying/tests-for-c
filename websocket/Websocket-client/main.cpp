@@ -24,6 +24,6 @@ int main() {
     });
 
     h.listen(3000);
-    h.connect("ws://localhost:3000");
+    h.connect("ws://127.0.0.1:3000");
     h.run();
 }
