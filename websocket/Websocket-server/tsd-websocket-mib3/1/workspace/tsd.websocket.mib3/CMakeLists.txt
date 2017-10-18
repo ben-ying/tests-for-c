@@ -2,8 +2,13 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 PROJECT(${MODULE_NAME})
 
 SET(${MODULE_NAME}_SOURCES
+        src/tsd/websocket/json/json.hpp
         src/tsd/websocket/mib3/WebSocketTest.cpp
         src/tsd/websocket/mib3/WebSocketTest.hpp
+        src/tsd/websocket/mib3/AudioHandler.cpp
+        src/tsd/websocket/mib3/AudioHandler.hpp
+        src/tsd/websocket/mib3/MediaHandler.cpp
+        src/tsd/websocket/mib3/MediaHandler.hpp
         src/tsd/websocket/uws/Asio.h
         src/tsd/websocket/uws/Backend.h
         src/tsd/websocket/uws/Epoll.cpp

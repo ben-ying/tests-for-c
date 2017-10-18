@@ -8,7 +8,7 @@ set(SRC_DIR tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/
 set(SOURCE_FILES
         ${APP_DIR}/WebSocketServer.cpp
         ${SRC_DIR}/WebSocketTest.cpp
-        ${SRC_DIR}/WebSocketTest.hpp)
+        ${SRC_DIR}/WebSocketTest.hpp tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/AudioHandler.cpp tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/AudioHandler.hpp tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/MediaHandler.cpp tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src/tsd/websocket/mib3/MediaHandler.hpp)
 
 INCLUDE_DIRECTORIES("tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/app")
 INCLUDE_DIRECTORIES("tsd-websocket-mib3/1/workspace/tsd.websocket.mib3/src")

@@ -8,14 +8,21 @@
 using nlohmann::json;
 
 enum Type {
-    TYPE_MESSAGE, TYPE_FILE, TYPE_REQUEST_FILE
+    TYPE_AUDIO_START = 101,
+    TYPE_AUDIO_PAUSE = 102,
+    TYPE_AUDIO_PREVIEW = 103,
+    TYPE_AUDIO_NEXT = 104,
+    TYPE_MEDIA_START = 201,
+    TYPE_MEDIA_PAUSE = 202,
+    TYPE_MEDIA_PREVIEW = 203,
+    TYPE_MEDIA_NEXT = 204,
 };
 
-void send_socket(uWS::WebSocket<uWS::CLIENT> *client) {
+void send_socket(uWS::WebSocket<uWS::CLIENT> *client, const int type) {
     std::ifstream i("socket.json");
     json j;
     i >> j;
-    j["type"] = TYPE_MESSAGE;
+    j["type"] = type;
     j["file_size"] = 0;
     j["name"] = "";
     j["data"] = "";
@@ -32,8 +39,37 @@ int main() {
     h.onConnection([&client, &m](uWS::WebSocket<uWS::CLIENT> *ws, uWS::HttpRequest req) {
         client = ws;
         std::cout << "Client Connected" << std::endl;
-//        send_socket(client);
-        client->send("111122222");
+        while (1) {
+            int i;
+            std::cout << "input type: ";
+            std::cin >> i;
+            switch (i) {
+                case 1:
+                    send_socket(client, TYPE_AUDIO_START);
+                    break;
+                case 2:
+                    send_socket(client, TYPE_AUDIO_PAUSE);
+                    break;
+                case 3:
+                    send_socket(client, TYPE_AUDIO_PREVIEW);
+                    break;
+                case 4:
+                    send_socket(client, TYPE_AUDIO_NEXT);
+                    break;
+                case 5:
+                    send_socket(client, TYPE_MEDIA_START);
+                    break;
+                case 6:
+                    send_socket(client, TYPE_MEDIA_PAUSE);
+                    break;
+                case 7:
+                    send_socket(client, TYPE_MEDIA_PREVIEW);
+                    break;
+                case 8:
+                    send_socket(client, TYPE_MEDIA_NEXT);
+                    break;
+            }
+        }
     });
 
     h.onMessage([](uWS::WebSocket<uWS::CLIENT> *ws, char *message, size_t length, uWS::OpCode opCode) {

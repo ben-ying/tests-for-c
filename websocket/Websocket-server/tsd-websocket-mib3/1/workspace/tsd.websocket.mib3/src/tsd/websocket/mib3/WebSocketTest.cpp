@@ -1,6 +1,8 @@
 #include "WebSocketTest.hpp"
-//#include "uWS.h"
 #include "tsd/websocket/uws/uWS.h"
+#include "tsd/websocket/json/json.hpp"
+#include "AudioHandler.hpp"
+#include "MediaHandler.hpp"
 #include <thread>
 #include <fstream>
 #include <set>
@@ -8,23 +10,98 @@
 #include <unordered_map>
 #include <atomic>
 
-WebSocketTest::WebSocketTest() {}
+using nlohmann::json;
 
-WebSocketTest::~WebSocketTest() {
+WebSocketTest::WebSocketTest() = default;
 
+WebSocketTest::~WebSocketTest() = default;
+
+enum Type {
+    TYPE_AUDIO_START = 101,
+    TYPE_AUDIO_PAUSE = 102,
+    TYPE_AUDIO_PREVIEW = 103,
+    TYPE_AUDIO_NEXT = 104,
+    TYPE_MEDIA_START = 201,
+    TYPE_MEDIA_PAUSE = 202,
+    TYPE_MEDIA_PREVIEW = 203,
+    TYPE_MEDIA_NEXT = 204,
+};
+
+void handle_linux(const int type) {
+    std::shared_ptr<AudioHandler> audioHandler;
+    std::shared_ptr<MediaHandler> mediaHandler;
+
+    switch (type) {
+        case TYPE_AUDIO_START:
+            audioHandler = std::make_shared<AudioHandler>();
+            audioHandler->start();
+            break;
+        case TYPE_AUDIO_PAUSE:
+            audioHandler = std::make_shared<AudioHandler>();
+            audioHandler->pause();
+            break;
+        case TYPE_AUDIO_PREVIEW:
+            audioHandler = std::make_shared<AudioHandler>();
+            audioHandler->preview();
+            break;
+        case TYPE_AUDIO_NEXT:
+            audioHandler = std::make_shared<AudioHandler>();
+            audioHandler->next();
+            break;
+        case TYPE_MEDIA_START:
+            mediaHandler = std::make_shared<MediaHandler>();
+            mediaHandler->start();
+            break;
+        case TYPE_MEDIA_PAUSE:
+            mediaHandler = std::make_shared<MediaHandler>();
+            mediaHandler->pause();
+            break;
+        case TYPE_MEDIA_PREVIEW:
+            mediaHandler = std::make_shared<MediaHandler>();
+            mediaHandler->preview();
+            break;
+        case TYPE_MEDIA_NEXT:
+            mediaHandler = std::make_shared<MediaHandler>();
+            mediaHandler->next();
+            break;
+        default:
+            break;
+    }
+}
+
+void send_socket(uWS::WebSocket<uWS::SERVER> *ws, const int type) {
+    std::ifstream i("dev/src/Websocket-server/socket.json");
+    json j;
+    i >> j;
+    j["type"] = type;
+    j["file_size"] = 0;
+    j["name"] = "";
+    j["data"] = "";
+    j["message"] = "server test message";
+    ws->send(j.dump().c_str());
+
+    handle_linux(type);
 }
 
 void WebSocketTest::testSimple() {
     uWS::Hub h;
 
+    char buffer[1024];
+    getcwd(buffer, 1024);
+    std::cout <<  buffer << std::endl;
+
     h.onConnection([](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
         std::cout << "Server Connected" << std::endl;
-        ws->send("112233");
     });
 
     h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
+        std::string message_str(message);
+        std::string str = message_str.substr(0, length);
         std::cout << "Server onMessage: "
-                  << *message << ", length: " << length << ", code: " << opCode << std::endl;
+                  << str << ", length: " << length << ", code: " << opCode << std::endl;
+        json j = json::parse(str);
+        int type = j["type"];
+        send_socket(ws, type);
     });
 
     h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
@@ -32,7 +109,7 @@ void WebSocketTest::testSimple() {
     });
 
     h.onDisconnection([](uWS::WebSocket<uWS::SERVER> *ws, int code, char *message, size_t length) {
-        std::cout << "SERVER CLOSED: " << code << std::endl;
+        std::cout << "CLIENT CLOSE: " << code << std::endl;
     });
 
     h.onError([](int port) {
@@ -50,7 +127,8 @@ void WebSocketTest::testSimple() {
     });
 
     h.listen(3000);
-    h.connect("ws://192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4192.168.1.4:3000", nullptr);
+    h.connect("ws://127.0.0.1:3000", nullptr);
+//    h.connect("ws://192.168.1.10:3000", nullptr);
     h.run();
 }
 
@@ -61,73 +139,6 @@ int WebSocketTest::countOccurrences(std::string word, std::string &document) {
     }
     return count;
 }
-
-//void testAutobahn() {
-//    uWS::Hub h;
-//
-//    uWS::Group <uWS::SERVER> *sslGroup = h.createGroup<uWS::SERVER>(uWS::PERMESSAGE_DEFLATE);
-//    uWS::Group <uWS::SERVER> *group = h.createGroup<uWS::SERVER>(uWS::PERMESSAGE_DEFLATE);
-//
-//    auto messageHandler = [](uWS::WebSocket <uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
-//        ws->send(message, length, opCode);
-//    };
-//
-//    sslGroup->onMessage(messageHandler);
-//    group->onMessage(messageHandler);
-//
-//    sslGroup->onDisconnection([sslGroup](uWS::WebSocket <uWS::SERVER> *ws, int code, char *message, size_t length) {
-//        static int disconnections = 0;
-//        if (++disconnections == 519) {
-//            std::cout << "SSL server done with Autobahn, shutting down!" << std::endl;
-//            sslGroup->close();
-//        }
-//    });
-//
-//    group->onDisconnection([group](uWS::WebSocket <uWS::SERVER> *ws, int code, char *message, size_t length) {
-//        static int disconnections = 0;
-//        if (++disconnections == 519) {
-//            std::cout << "Non-SSL server done with Autobahn, shutting down!" << std::endl;
-//            group->close();
-//        }
-//    });
-//
-//    uS::TLS::Context c = uS::TLS::createContext("misc/ssl/cert.pem",
-//                                                "misc/ssl/key.pem",
-//                                                "1234");
-//    if (!h.listen(3001, c, 0, sslGroup) || !h.listen(3000, nullptr, 0, group)) {
-//        std::cout << "FAILURE: Error listening for Autobahn connections!" << std::endl;
-//        exit(-1);
-//    } else {
-//        std::cout << "Acepting Autobahn connections (SSL/non-SSL)" << std::endl;
-//    }
-//
-//    std::thread t([]() {
-//        if (!system("wstest -m fuzzingclient -s misc/Autobahn.json")) {
-//
-//        }
-//    });
-//
-//    h.run();
-//    t.join();
-//
-//    // "FAILED", "OK", "NON-STRICT"
-//    std::ifstream fin("misc/autobahn/index.json");
-//    fin.seekg(0, fin.end);
-//    int length = fin.tellg();
-//    fin.seekg(0, fin.beg);
-//    char *buffer = new char[length];
-//    fin.read(buffer, length);
-//    std::string index(buffer, length);
-//
-//    std::cout << std::endl << std::endl;
-//    std::cout << "OK: " << countOccurrences("\"OK\"", index) << std::endl;
-//    std::cout << "NON-STRICT: " << countOccurrences("\"NON-STRICT\"", index) << std::endl;
-//    std::cout << "FAILED: " << countOccurrences("\"FAILED\"", index) << std::endl;
-//
-//    delete sslGroup;
-//    delete group;
-//    delete[] buffer;
-//}
 
 void WebSocketTest::serveBenchmark() {
     uWS::Hub h;

@@ -37,8 +37,11 @@ int main(int argc, char *argv[]) {
 
     h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
         std::string message_str(message);
+        std::string str = message_str.substr(0, length);
         std::cout << "Server onMessage: "
-                  << message_str.substr(0, length) << ", length: " << length << ", code: " << opCode << std::endl;
+                  << str << ", length: " << length << ", code: " << opCode << std::endl;
+        json j = json::parse(str);
+        int type = j["type"];
         send_socket(ws);
     });
 
