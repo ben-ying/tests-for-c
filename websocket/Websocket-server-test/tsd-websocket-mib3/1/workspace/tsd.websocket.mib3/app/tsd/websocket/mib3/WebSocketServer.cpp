@@ -10,20 +10,26 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <atomic>
+
 using nlohmann::json;
 
 enum Type {
-    TYPE_MESSAGE, TYPE_FILE, TYPE_REQUEST_FILE
+    TYPE_AUDIO_STREAM = 100,
+    TYPE_AUDIO_START = 101,
+    TYPE_AUDIO_PAUSE = 102,
+    TYPE_AUDIO_PREVIEW = 103,
+    TYPE_AUDIO_NEXT = 104,
+    TYPE_MEDIA_START = 201,
+    TYPE_MEDIA_PAUSE = 202,
+    TYPE_MEDIA_PREVIEW = 203,
+    TYPE_MEDIA_NEXT = 204,
 };
 
 void send_socket(uWS::WebSocket<uWS::SERVER> *ws) {
     std::ifstream i("../socket.json");
     json j;
     i >> j;
-    j["type"] = TYPE_MESSAGE;
-    j["file_size"] = 0;
-    j["name"] = "";
-    j["data"] = "";
+    j["type"] = TYPE_AUDIO_START;
     j["message"] = "server test message";
     ws->send(j.dump().c_str());
 }
@@ -36,13 +42,42 @@ int main(int argc, char *argv[]) {
     });
 
     h.onMessage([](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
-        std::string message_str(message);
-        std::string str = message_str.substr(0, length);
-        std::cout << "Server onMessage: "
-                  << str << ", length: " << length << ", code: " << opCode << std::endl;
-        json j = json::parse(str);
-        int type = j["type"];
-        send_socket(ws);
+        if (length > 0) {
+            struct timeval tp;
+            gettimeofday(&tp, NULL);
+            long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+            if (opCode == uWS::OpCode::TEXT) {
+                std::string message_str(message);
+                std::string str = message_str.substr(0, length);
+                std::cout << "Server onMessage: "
+                          << str << ", length: " << length << ", code: " << opCode << std::endl;
+                send_socket(ws);
+                json j = json::parse(str);
+                int type = j["type"];
+            } else if (opCode == uWS::OpCode::BINARY) {
+//                if (type == TYPE_AUDIO_STREAM) {
+                    std::ofstream file;
+////                    long remain_data = j["remaining_data"];
+////                    if (remain_data + BUFSIZ == j["file_size"]) {
+                        file.open("test.pcm", std::fstream::out);
+                        if (!file.fail()) {
+                            for (int i = 0; i < length; i++) {
+                                file.put(message[i]);
+                            }
+                            file.close();
+                            gettimeofday(&tp, NULL);
+                            std::cout << "spent: " << tp.tv_sec * 1000 + tp.tv_usec / 1000 - ms << std::endl;
+                            std::cout << "end received: " << ms << std::endl;
+                        } else{
+                            std::cout << "test" << std::endl;
+                        }
+//                    }
+//                    if (j["remaining_data"] <= 0) {
+//                        file.close();
+//                    }
+//                }
+            }
+        }
     });
 
     h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t length, size_t remainingBytes) {
