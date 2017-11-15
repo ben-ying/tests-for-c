@@ -2,7 +2,7 @@
 #include "tsd/websocket/mib3/WebSocketTest.hpp"
 #include "tsd/websocket/mib3/json.hpp"
 //#include "tsd/websocket/mib3/uWS.h"
-#include "tsd/websocket/uws/uWS.h"
+#include "tsd/websocket/uWs/uWS.h"
 
 #include <thread>
 #include <fstream>
@@ -51,9 +51,9 @@ int main(int argc, char *argv[]) {
                 std::string str = message_str.substr(0, length);
                 std::cout << "Server onMessage: "
                           << str << ", length: " << length << ", code: " << opCode << std::endl;
-                send_socket(ws);
-                json j = json::parse(str);
-                int type = j["type"];
+//                send_socket(ws);
+//                json j = json::parse(str);
+//                int type = j["type"];
             } else if (opCode == uWS::OpCode::BINARY) {
 //                if (type == TYPE_AUDIO_STREAM) {
                     std::ofstream file;
@@ -103,8 +103,9 @@ int main(int argc, char *argv[]) {
     });
 
     h.listen(3000);
-    h.connect("ws://127.0.0.1:3000", nullptr);
+//    h.connect("ws://127.0.0.1:3000", nullptr);
 //    h.connect("ws://192.168.1.10:3000", nullptr);
+    h.connect("ws://192.168.43.12:3000", nullptr);
     h.run();
 
     std::shared_ptr<WebSocketTest> webSocketTest(new WebSocketTest());

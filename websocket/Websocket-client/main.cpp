@@ -1,9 +1,10 @@
 #include <assert.h>
 //#include "easywsclient.cpp" // <-- include only if you don't want compile separately
-#include <uWS/uWS.h>
+//#include <uWS/uWS.h>
 #include <iostream>
 #include <fstream>
 #include "json.hpp"
+#include "uWS.h"
 
 using nlohmann::json;
 
@@ -65,7 +66,7 @@ int main() {
     h.onConnection([&client, &m](uWS::WebSocket<uWS::CLIENT> *ws, uWS::HttpRequest req) {
         client = ws;
         std::cout << "Client Connected" << std::endl;
-        send_socket(client, TYPE_AUDIO_STREAM);
+        //send_socket(client, TYPE_AUDIO_STREAM);
 
 //        while (1) {
 //            int i;

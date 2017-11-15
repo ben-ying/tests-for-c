@@ -3,7 +3,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <string.h>
-#include <zconf.h>
+//#include <zconf.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 
         printf("received %s from server\n", buf);
     }
-    close(client_socket);
+//    close(client_socket);
 
     return 0;
 }

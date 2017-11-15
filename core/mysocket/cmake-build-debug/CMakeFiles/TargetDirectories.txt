@@ -1,0 +1,3 @@
+/home/android/android-latest/system/core/mysocket/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/android/android-latest/system/core/mysocket/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/android/android-latest/system/core/mysocket/cmake-build-debug/CMakeFiles/mysocket.dir
