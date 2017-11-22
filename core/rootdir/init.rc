@@ -679,8 +679,8 @@ on property:vold.decrypt=trigger_shutdown_framework
 
 on property:sys.boot_completed=1
     bootchart stop
-    start mytestservice
-    start websocket
+    #start mytestservice
+    start mysocket
 
 # system server cannot write to /proc/sys files,
 # and chown/chmod does not work for /proc/sys/ entries.
@@ -735,10 +735,10 @@ service flash_recovery /system/bin/install-recovery.sh
     oneshot
 
 # added by ben
-service mytestservice /system/bin/mytest.sh
+service mysocket /system/bin/mysocket
     class main
     user root
     group root
-    seclabel u:r:shell:s0
+    seclabel u:r:mysocket:s0
     oneshot
 
